@@ -25,6 +25,8 @@ Once the required fields are filled, click on **"Find All Routes"**.
 
 ---
 
+![Findig Routing Rule](images/simulator1.png)
+
 ### Benefits
 
 - 🔍 **Preview Routing Logic**: Easily inspect which routing rule is triggered for a given user, sender, and recipient combination.
