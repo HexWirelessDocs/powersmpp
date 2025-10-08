@@ -25,7 +25,7 @@ Once the required fields are filled, click on **"Find All Routes"**.
 
 ---
 
-![Findig Routing Rule](images/simulator1.png)
+![Findig Routing Rules](images/simulator1.png)
 
 ### Benefits
 
