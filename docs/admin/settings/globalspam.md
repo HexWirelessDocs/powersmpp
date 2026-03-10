@@ -1,4 +1,4 @@
-## 🛡️ Global Spam Keywords
+## Global Spam Keywords
 
 Within the iTextPRO application, there exists an integrated **SPAM Engine**, offering users the ability to **configure a specific set of keywords or phrases**. This **SPAM Engine functions as a filter**, effectively screening out spam messages.
 
@@ -22,7 +22,7 @@ The **flexibility to customize settings** allows trusted users to tailor the app
 
 ---
 
-## 🚫 Spam Keywords
+## Spam Keywords
 
 iTextPRO incorporates a **robust in-built SPAM Engine**, offering users the ability to **configure a set of keywords or phrases**. This engine filters out unwanted messages, providing a **proactive approach** to avoid penalties from operators and ensuring **regulatory compliance**.
 

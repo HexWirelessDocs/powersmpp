@@ -1,3 +1,10 @@
+---
+tags:
+  - Reporting
+  - DLR
+  - Monitoring
+---
+
 # Reporting
 
 ## iTextPRO Reporting Module Overview

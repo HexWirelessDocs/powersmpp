@@ -1,4 +1,4 @@
-## 💰 Client Transaction
+## Client Transaction
 
 The **Client Transaction** feature presents a **detailed history of transactions**, encompassing both your actions and the user's interactions. This comprehensive view includes information on **balance additions and deductions** made by you in the user account, along with the corresponding **balance before and after** details.
 

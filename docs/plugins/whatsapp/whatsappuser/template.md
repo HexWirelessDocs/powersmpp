@@ -47,7 +47,8 @@ The header is the title or heading of the template. There are three options:
 - **Text:** Add a text heading.  
 - **Media:** Insert an image, video, document, or location as the header.  
 
-> **Note:** The header is optional and can be skipped if not needed.
+!!! note
+    The header is optional and can be skipped if not needed.
 
 ![Template Header](images/template3.png)
 

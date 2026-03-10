@@ -2,7 +2,8 @@
 
 The **Manage Services** section in iTextPRO provides visibility into the various **background and foreground services** that drive the core functionalities of the platform. This interface is primarily intended for expert users or administrators.
 
-> ⚠️ **Caution:** While it is possible to stop or start a service from the web interface, this should be done **with extreme caution**, particularly during peak load times, as it may result in **data loss** or **service disruption**.
+!!! danger "Caution"
+    While it is possible to stop or start a service from the web interface, this should be done **with extreme caution**, particularly during peak load times, as it may result in **data loss** or **service disruption**.
 
 ---
 

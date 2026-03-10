@@ -1,4 +1,4 @@
-## ✉️ Manage Emails
+## Manage Emails
 
 The **Manage Emails** feature in iTextPRO provides users with the ability to configure Email notification alerts for various events performed by the application. This feature enhances communication by allowing users to receive timely updates and alerts on important activities.
 

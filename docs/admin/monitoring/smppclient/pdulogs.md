@@ -1,3 +1,10 @@
+---
+tags:
+  - Monitoring
+  - PDU
+  - Troubleshooting
+---
+
 # Monitoring
 
 iTextPRO provides comprehensive **monitoring tools** to ensure optimal SMS delivery performance and system stability. This includes **real-time Live Monitoring** for traffic insights and a robust **PDU Logger** for deep message-level analysis.

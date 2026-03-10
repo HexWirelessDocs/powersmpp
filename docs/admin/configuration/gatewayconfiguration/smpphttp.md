@@ -1,4 +1,11 @@
-### Configuration
+---
+tags:
+  - SMPP
+  - Gateway
+  - Configuration
+---
+
+# Configuration
 
 ## SMPP Gateways (MO/MT)
 
@@ -16,7 +23,7 @@ For **SMPP**, a **single bind** enables Mobile-Originated (MO), Mobile-Terminate
 
 ---
 
-### 🔧 Configuring a New Gateway
+### Configuring a New Gateway
 
 To set up an SMPP connector:
 
@@ -29,31 +36,23 @@ To set up an SMPP connector:
 
 ---
 
-#### Required Credentials:
+#### Required Credentials
 
-- **Gateway Name:**  
-  A user-friendly name to identify your gateway.
+| Field | Description |
+|-------|-------------|
+| **Gateway Name** | A user-friendly name to identify your gateway |
+| **IP Address** | The IP from your SMSC/vendor |
+| **System ID** | Username provided by your vendor/SMSC |
+| **Password** | Used for authentication to the SMSC |
+| **Tx Port / Rx Port / TxR Port** | Ports for Transmitter, Receiver, and Transceiver binds |
+| **System Type** | *(Optional)* Enter only if required by the vendor |
 
-- **IP Address:**  
-  The IP from your SMSC/vendor.
-
-- **System ID:**  
-  Username provided by your vendor/SMSC.
-
-- **Password:**  
-  Used for authentication to the SMSC.
-
-- **Tx Port / Rx Port / TxR Port:**  
-  Ports for Transmitter, Receiver, and Transceiver binds respectively.
-
-- **System Type (Optional):**  
-  Enter only if required by the vendor.
-
-📌 **Note:** Double-check all values as per SMSC/vendor documentation to ensure a successful connection.
+!!! warning
+    Double-check all values as per SMSC/vendor documentation to ensure a successful connection.
 
 ---
 
-### ⚙️ Gateway Properties
+### ️ Gateway Properties
 
 ![Gateway Properties](images/httpgateway3.png)
 
@@ -83,7 +82,7 @@ Configure SMPP Gateway properties in iTextPRO for optimal performance:
 
 ---
 
-### 🧩 TON/NPI Setup
+### TON/NPI Setup
 
 ![TON/NPI Setup](images/httpgateway4.png)
 
@@ -98,7 +97,7 @@ Configure SMPP Gateway properties in iTextPRO for optimal performance:
 
 ---
 
-### 🧷 Roles & Routing
+### Roles & Routing
 
 ![Gateway Roles](images/httpgateway5.png)
 
@@ -114,7 +113,5 @@ Configure SMPP Gateway properties in iTextPRO for optimal performance:
 - **Blind Routing:**  
   Allows message submission to countries **without defined cost prices**.
 
-📌 **Note:**  
-After configuration, clicking **"Save"** sends an **on-the-fly bind request** — no manual restart required.
-
----
+!!! tip
+    After configuration, clicking **"Save"** sends an **on-the-fly bind request** — no manual restart required.

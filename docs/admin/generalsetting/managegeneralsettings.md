@@ -1,4 +1,4 @@
-## ⚙️ General Settings
+## General Settings
 
 In **General Settings**, you can find four sub-options:
 

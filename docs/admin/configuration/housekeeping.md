@@ -1,12 +1,13 @@
-## 🧹 Housekeeping
+## Housekeeping
 
 The **Housekeeping** feature in iTextPRO offers a powerful tool to **reset Master Billing Data** in a single action. This option is intended for administrative use in situations where a fresh setup or cleanup of billing data is required.
 
-> ⚠️ **Important Note:** Once deleted, data **cannot be restored**. Use this feature with extreme caution.
+!!! danger "Important"
+    Once deleted, data **cannot be restored**. Use this feature with extreme caution.
 
 ---
 
-### 🛠️ How to Use Housekeeping
+### ️ How to Use Housekeeping
 
 1. Navigate to the **Housekeeping** section.
 2. You will see a list of **Master Billing Data tables** with toggle switches labeled **Yes/No** next to each.
@@ -15,7 +16,7 @@ The **Housekeeping** feature in iTextPRO offers a powerful tool to **reset Maste
 
 ---
 
-### ⚠️ Master Data Alert
+### ️ Master Data Alert
 
 Upon clicking the Reset button:
 
@@ -23,11 +24,12 @@ Upon clicking the Reset button:
 - You will be prompted with an option to **take a backup** of your data before proceeding.
 - After confirmation, iTextPRO will **permanently delete** the selected billing data.
 
-> 💾 It is **strongly recommended** to back up your data before using this feature.
+!!! warning "Backup Recommended"
+    It is **strongly recommended** to back up your data before using this feature.
 
 ---
 
-### 💡 When to Use Housekeeping
+### When to Use Housekeeping
 
 - When setting up a **fresh billing environment**.
 - During major **data cleanup** or **test data removal**.

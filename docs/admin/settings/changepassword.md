@@ -1,4 +1,4 @@
-## 🔒 Change Password
+## Change Password
 
 The **Change Password** option in iTextPRO provides users with the flexibility to update their admin account password at their convenience. This feature allows for a personalized and secure password change experience.
 

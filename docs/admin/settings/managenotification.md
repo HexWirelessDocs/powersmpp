@@ -1,4 +1,4 @@
-## 📢 Manage Notification
+## Manage Notification
 
 Notifications in **iTextPRO** allow you and your reseller to convey important messages directly to your users. The platform provides a straightforward process for managing notifications:
 

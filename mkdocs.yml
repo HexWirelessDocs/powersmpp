@@ -4,22 +4,21 @@ site_url: https://doc.powersmpp.com
 theme:
   name: material
   features:
-#    - navigation.expand
-#    - navigation.tabs
-#    - navigation.tabs.sticky
-#    - navigation.sections
-#    - navigation.path
-    - search.highlight 
-    - search.suggest  
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.path
+    - search.highlight
+    - search.suggest
+    - search.share  
     - navigation.tracking
     - navigation.footer
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.instant.progress
     - navigation.top
-    - toc.integrate
+    - toc.follow
     - content.code.copy
-    - content.action.edit
   font:
     text: Roboto
     code: Red Hat Mono
@@ -43,5 +42,41 @@ theme:
     # Light Mode
 
 
-INHERIT: ./nav.yml    
+plugins:
+  - search
+  - tags
 
+extra:
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.powersmpp.com
+      name: PowerSMPP Website
+    - icon: fontawesome/brands/whatsapp
+      link: https://wa.me/919909945175
+      name: WhatsApp Support
+  generator: false
+
+copyright: Copyright &copy; 2024-2026 PowerSMPP. All rights reserved.
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.mark
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+
+INHERIT: ./nav.yml

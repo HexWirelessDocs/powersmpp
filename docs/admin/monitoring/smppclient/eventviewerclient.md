@@ -22,4 +22,5 @@ This tool is essential for **proactive issue resolution** and **efficient troubl
 
 ---
 
-> **Note:** Regularly checking the **Event Viewer** is crucial for staying informed about system health and ensuring **optimal SMS platform performance**.
+!!! tip
+    Regularly checking the **Event Viewer** is crucial for staying informed about system health and ensuring **optimal SMS platform performance**.

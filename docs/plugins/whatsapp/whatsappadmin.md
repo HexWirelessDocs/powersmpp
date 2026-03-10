@@ -1,3 +1,10 @@
+---
+tags:
+  - WhatsApp
+  - Plugin
+  - Configuration
+---
+
 # Administration - WhatsApp Module
 
 ## 1. Active Service Description

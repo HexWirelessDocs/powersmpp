@@ -22,4 +22,5 @@ It captures **comprehensive event details**, enabling efficient troubleshooting 
 
 ---
 
-> **Note:** Regularly reviewing the **Event Viewer (DLR)** is essential to maintain DLR update reliability and promptly address any issues.
+!!! tip
+    Regularly reviewing the **Event Viewer (DLR)** is essential to maintain DLR update reliability and promptly address any issues.

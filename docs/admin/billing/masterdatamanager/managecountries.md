@@ -1,3 +1,10 @@
+---
+tags:
+  - Billing
+  - Rate Plan
+  - Pricing
+---
+
 # Billing
 
 ## Simplified Billing Management with iTextPRO

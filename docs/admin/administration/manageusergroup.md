@@ -1,4 +1,4 @@
-## 👥 Manage User Groups
+## Manage User Groups
 
 This feature facilitates the **logical grouping of users**, enabling the mapping of these groups to specific **MT routing rules**.
 

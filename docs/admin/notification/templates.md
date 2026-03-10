@@ -38,7 +38,8 @@
 - Customizable templates and system variables enable personalized and informative communication.
 - Helps organizations stay ahead of potential challenges.
 
-> **Note:** SMTP details are mandatory for Admin as well as for reseller accounts to trigger emails.
+!!! note
+    SMTP details are mandatory for Admin as well as for reseller accounts to trigger emails.
 
 ---
 

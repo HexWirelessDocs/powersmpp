@@ -1,4 +1,10 @@
-## 🛠️ Administration
+---
+tags:
+  - Admin
+  - User Management
+---
+
+## Administration
 
 **Welcome to iTextPRO**, your gateway to efficient document management!
 
@@ -10,7 +16,7 @@ For in-depth insights into the functionality of the Administration section, you'
 
 ---
 
-## 👥 User Administration
+## User Administration
 
 Navigating to the **User Management** page is a breeze. Just click on the **'User Management'** option, and it will seamlessly guide you to the User Management page.
 
@@ -20,7 +26,7 @@ To continue, **enter the username** you're interested in within the dedicated se
 
 ---
 
-## ➕ Add New User
+## Add New User
 
 Diving into the process of expanding your user base is simple. Just click the **"Add New User"** button to initiate the creation of a brand-new user account.
 
@@ -94,7 +100,8 @@ You may also click **"Skip"** to proceed.
 - **Save Changes**
 - **Proceed to Next Step**
 
-> 💡 All credit transactions are in **base currency only**.
+!!! note
+    All credit transactions are in **base currency only**.
 
 ![Credits](images/adduser6.png)
 
@@ -124,7 +131,8 @@ To create an SMPP account:
   - **Password**
   - **Whitelist IPs** (for security)
 
-> 🛡️ Best Practice: Whitelist IPs to avoid SMS spamming.
+!!! tip "Best Practice"
+    Whitelist IPs to avoid SMS spamming.
 
 Use **0.0.0.0** for open access (authentication via System ID & password).
 
@@ -150,7 +158,8 @@ Manage rate plans:
   - Activation status
 - **Import Rate Plan Template**
 
-> ⚠️ Ensure **selling price ≥ gateway cost** to avoid message drops (Loss Protection Policy).
+!!! warning "Loss Protection"
+    Ensure **selling price ≥ gateway cost** to avoid message drops (Loss Protection Policy).
 
 #### **Option 3: Manage this User**
 Access the **Profile** or **User Management** page for further adjustments.
@@ -221,7 +230,8 @@ For a visual representation, please refer to the figure below:
 #### **Reset Password**
 - **Action:** Reset the password for **users or reseller accounts**.
 
-> **Note:** All actions in the User Management section contribute to a **comprehensive and streamlined user account management** experience. For further details, consult the iTextPRO user manual.
+!!! note
+    All actions in the User Management section contribute to a **comprehensive and streamlined user account management** experience. For further details, consult the iTextPRO user manual.
 
 ---
 
@@ -241,8 +251,23 @@ For a visual representation, please refer to the figure below:
 ### **API IP Validation**
 - **Description:** Enabling this option ensures iTextPRO **validates the whitelisted IP address** before processing API requests.
 
-### **HTTP Web Push**
+### **SMS HTTP Web Push**
 - **Description:** When enabled, the application **forwards DLR copies** to the HTTP endpoint URL configured in the user account's manage webhooks option.
+
+### **WhatsApp HTTP Web Push**
+- **Description:** Enabling this toggle button allows admin to enable the **WhatsApp webhook option** for the user to receive the WhatsApp DLRs/Conversations to the configured endpoints.
+
+![WhatsApp HTTP Web Push](images/usermanagement14.png)
+
+### **Show Masked Mobile Number**
+- **Description:** The show masked number allows admin to enable the feature of **number masking**. Once this toggle button has been set as active, all the mobile numbers on which the campaigns have been initiated from the application, their **last four digits** for the mobile number will be masked.
+
+![Show Masked Mobile Number](images/usermanagement15.png)
+
+!!! example
+    In the user's Campaign Report, masked numbers appear as `91738737XXXX`.
+
+![Masked Number in Report](images/usermanagement16.png)
 
 ### **User Overselling Threshold**
 - **Description:** Enables configuration of an **Overselling Threshold limit** on users, allowing them to consume a specified amount beyond the allocated balance.
@@ -272,28 +297,34 @@ If the threshold is set at **500 EUROS**, the user can consume up to **500 EUROS
 - **Description:** Allows enabling or disabling **DLR compensation** for child reseller accounts.
 
 ### **DLR Compensation**
-- **Description:** Defines **DLR compensation percentage** for different message statuses, generating **automatic fake DLRs** to maximize profitability.
+- **Description:** This feature allows admin to generate some additional profit by applying compensation on the messages and generating the DLR from the application **without submitting the messages to the gateway**.
 
-**Properties:**
+![DLR Compensation](images/dlrcompensation1.png)
 
-- **DLR Status and Compensation:** Select message status and corresponding percentage.  
-- **Threshold SMS Limit:** Defines the destination number threshold for applying DLR compensation.
+**Configuration:**
 
-> **Note:** Advanced settings empower administrators to **customize user experiences** and **optimize profitability**.
+- **DLR Status:** Select message status which needs to be applied for the messages on which the compensation has been applied.
+- **Percentage:** Add the percentage value to which compensation needs to be applied.
+- **Error Code:** Configure error code against the status, so the same will be updated in reports.
+- **Threshold SMS Limit:** Defines the destination number threshold for applying DLR compensation. Once the threshold is reached, the compensation will be applied according to the configuration.
 
-**Example:**  
-You’ve applied DLR compensation on the user account as below, and your user sends the campaign on 200 Mobile Numbers:
+!!! note
+    For web interface the threshold limit will work on the basis of campaign and in case of SMPP/API, the threshold will work on daily basis.
 
-- **DLR Compensation:** 30%  
-- **Threshold SMS Limit:** 100 Mobile Numbers  
+![DLR Compensation Controller](images/dlrcompensation2.png)
 
-![DLR Compensation](images/usermanagement4.png)
+??? example "DLR Compensation Example"
+    A user has initiated a campaign on 2000 numbers with the following configuration:
 
-As per the configuration:
-- Out of 200 messages, only **140 messages** will be submitted to the gateway vendor.
-- For **60 messages**, iTextPRO generates **automatic fake DLRs**, resulting in maximizing your profitability for 60 messages.
+    - **DLR Compensation:** 20 Percent
+    - **Threshold Limit:** 1000
 
-If the user sends a campaign on **70 mobile numbers** (below threshold), **DLR compensation is not applied**.
+    As per the configuration:
+
+    - Out of 2000 messages, only **1600 messages** will be submitted to the gateway vendor.
+    - For **400 messages**, iTextPRO generates **automatic fake DLRs**, resulting in maximizing your profitability for 400 messages.
+
+    If the user sends a campaign on **1000> mobile numbers** (below threshold), **DLR compensation is not applied**.
 
 ---
 
@@ -301,13 +332,13 @@ If the user sends a campaign on **70 mobile numbers** (below threshold), **DLR c
 
 This section consists of the **Plugins offered by iTextPRO**. These plugins need to be **opted separately** as they are not part of the packaged application.
 
-![Active Services](images/usermanagement5.png)
+![Active Services](images/activeservices1.png)
 
-**Active Services Display:** Shows the plugins currently enabled.
+**Active Services Display:** Shows the plugins currently enabled. Also, the admin can activate or deactivate the plugins from the toggle button.
 
 ### 1. **MO (Mobile Originator)**
 - **Function:** Activates the **MO service** for users.
-- Once iTextPRO receives the **incoming message (MO)**, it appears in the **user's inbox report**.
+- Once iTextPRO+ receives the **incoming message (MO)**, it appears in the **user's inbox report**.
 - Messages can be forwarded to **SMPP, HTTP push, email**, or trigger **automatic replies**.
 
 ### 2. **Smart SMS**
@@ -321,6 +352,13 @@ This section consists of the **Plugins offered by iTextPRO**. These plugins need
 
 ### 3. **Email to SMS**
 - **Function:** Converts **emails into SMS messages**, enabling communication via email gateways.
+
+### 4. **WhatsApp**
+- **Function:** It enables the **WhatsApp services** to the user.
+- Once the plugin has been activated, the WhatsApp module will appear in the application.
+- Users can connect their business account to the application.
+- Add templates, configure the webhooks for DLR and Conversations.
+- Get APIs to send messages through APIs.
 
 ---
 
@@ -381,7 +419,8 @@ To add credits:
 - Enter **payment details**
 - Specify the **credit amount**
 
-> **Note:** Credits must be added in the **base currency**.
+!!! note
+    Credits must be added in the **base currency**.
 
 ![Add Credit](images/usermanagement11.png)
 
@@ -409,6 +448,102 @@ The **MT Routing Rule** is a pivotal feature. You can:
 
 Users may also configure **fixed gateway routing rules**, auto-populating entries in the **Main Routing Engine**.
 
-> **Note:** Configuring a fixed gateway is optional but enhances **routing efficiency**.
+!!! tip
+    Configuring a fixed gateway is optional but enhances **routing efficiency**.
 
 ![MT Routing](images/usermanagement13.png)
+
+---
+
+## Manage Rate Plan
+
+The **Manage Rate Plan** option allows the admin to configure the **selling price** for the user.
+
+**Selling Price:** The amount admin will be charging to their user per message will be the selling price.
+
+To add a selling price to the user, follow the below steps:
+
+**Step 1:** Go to Administration >> User Administration >> User Management >> Search User >> **Manage Rate Plan**.
+
+![Manage Rate Plan](images/rateplan1.png)
+
+**Step 2:** Choose the appropriate method to add selling price.
+
+### 1] Add New Selling Price
+
+This allows the admin to enter selling price one-by-one to the Country and Networks for the user.
+
+Select the Interface Type: **ALL** or **SMPP**
+
+![Add New Selling Price](images/rateplan2.png)
+
+#### a) ALL Interface
+
+If the interface has been chosen as ALL, the admin needs to specify the Country & Network then the selling price. Once all the details have been added, click on **ADD** to save the configuration.
+
+![ALL Interface](images/rateplan3.png)
+
+#### b) SMPP Interface
+
+If the Interface has been chosen as SMPP, the admin needs to specify the **SMPP Connector name or ESME name**, so the rate plan will be applicable for that specific SMPP account. Then specify the Country & Network and the selling price. Once all the details have been added, click on **ADD** to save the configuration.
+
+![SMPP Interface](images/rateplan4.png)
+
+!!! info "ALL vs SMPP Interface"
+    **ALL** indicates messages initiated from all the interfaces (Web, API and SMPP). **SMPP** indicates a rate plan only applicable when the user is sending traffic using the SMPP interface. If no SMPP-specific selling price is configured, messages will be processed with the price configured for ALL.
+
+![Rate Plan List](images/rateplan8.png)
+
+### 2] Import Rate Plan Template
+
+This option allows the admin to import all the existing rates or prepared sheet of rates to the user account in one go. It will reduce the iterations to adding several selling prices to the user account.
+
+**Step 1:** Select the rate plan
+**Step 2:** Admin can choose the interface as well (ALL or SMPP)
+**Step 3:** Option to overwrite any existing selling price.
+**Step 4:** Click on the Import button to add the selling price to the user account.
+
+![Import Rate Plan Template](images/rateplan6.png)
+
+### Notify User
+
+Whenever the selling price is updated by the admin, an email will be sent to the email registered in the user account with the subject line **"Pricing Update Notification - Your Messaging Rates Have Been Revised"**.
+
+This email contains the excel files for all the selling prices configured in the application.
+
+Also, the admin/Reseller can click on the **Notify User** button to trigger the email to the user in case they have not received any email.
+
+![Notify User](images/rateplan5.png)
+
+---
+
+## User Creation - Billing Mode
+
+During **user creation**, if the **Invoicing module** is enabled in the application, the administrator must configure the **Billing Mode** for the user. The selected billing mode determines how message usage is charged and how invoices are generated.
+
+![Billing Mode](images/billingmode1.png)
+
+The following billing modes are available:
+
+=== "Prepaid"
+
+    When a user is configured as **Prepaid**:
+
+    - The administrator must **generate an invoice manually**.
+    - The invoice amount must be **credited to the user's account**.
+    - Only after the invoice is claimed and balance is available will the user be able to send messages from the application.
+    - Message sending is restricted based on the available prepaid balance.
+
+=== "Postpaid"
+
+    When a user is configured as **Postpaid**:
+
+    - The administrator must **assign an overdraft limit** to the user.
+    - The application will **automatically generate invoices** based on the configured **Billing Cycle**.
+    - The user can continue sending messages until the assigned overdraft limit is reached.
+    - Billing is calculated based on actual usage during the billing period.
+
+!!! warning "Key Notes"
+    - The **Billing Mode** is applicable only when the Invoicing module is active.
+    - Billing configuration directly impacts user message delivery and invoice generation.
+    - Proper overdraft limits and billing cycles must be configured for postpaid users to avoid service disruption.

@@ -7,7 +7,7 @@ This document explains how **Message Body Normalization** works and how administ
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 The Message Body Normalization Rule extends the existing **OA/DA Normalization Rule**. It provides multiple ways to manipulate message content, including:
 
@@ -19,7 +19,7 @@ These options help administrators ensure that all messages conform to gateway st
 
 ---
 
-## ⚙️ Accessing Message Body Normalization
+## ️ Accessing Message Body Normalization
 
 To configure Message Body Normalization:
 
@@ -32,7 +32,7 @@ To configure Message Body Normalization:
 
 ---
 
-## 🧩 Rule Configuration
+## Rule Configuration
 
 Once you click **Add New**, a configuration page appears with multiple fields.
 
@@ -86,7 +86,7 @@ Same conditional options as above can be applied to message content, enabling pr
 
 ---
 
-## 🛠️ Actions: Detailed Explanation
+## ️ Actions: Detailed Explanation
 
 In **PowerSMPP**, the **Action** section offers three configurable methods to manipulate message content before submission to the gateway:
 
@@ -182,7 +182,7 @@ Adds both a prefix and suffix.
 
 ---
 
-## 🔄 Combining Multiple Actions
+## Combining Multiple Actions
 
 Admins can apply multiple actions within a single rule.
 
@@ -198,7 +198,7 @@ This extracts the OTP and applies additional text formatting as configured.
 
 ---
 
-## 🧠 Priority and Compatibility
+## Priority and Compatibility
 
 - **Message Body Normalization** executes **before** the **OA/DA Normalization**.  
 - This ensures message content is optimized and formatted first, preventing rule conflicts.  
@@ -206,7 +206,7 @@ This extracts the OTP and applies additional text formatting as configured.
 
 ---
 
-## ✅ Summary
+## Summary
 
 **Message Body Normalization** in PowerSMPP empowers administrators to:
 - Extract OTPs or codes,  

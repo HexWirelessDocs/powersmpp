@@ -49,4 +49,5 @@ This method is suitable for situations where a small number of contacts need to 
 - **Quick Copy and Paste** – Use this method for rapid addition of contacts from Excel.  
 - **Manual Entry** – Ideal for adding a few contacts individually.  
 
-> **Note:** Ensure that the file format (`.xls`, `.csv`, `.txt`) is compatible when using the **Import From a File** method.
+!!! note
+    Ensure that the file format (`.xls`, `.csv`, `.txt`) is compatible when using the **Import From a File** method.

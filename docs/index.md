@@ -1,27 +1,50 @@
 # Welcome to PowerSMPP
 
-PowerSMPP is a high-performance and reliable messaging gateway designed for telecom operators, aggregators, and enterprises.  
+PowerSMPP is a high-performance and reliable messaging gateway designed for telecom operators, aggregators, and enterprises.
 
-It provides advanced features for SMS routing, monitoring, user management, and plugin integrations to ensure smooth and scalable messaging operations.  
+It provides advanced features for SMS routing, monitoring, user management, and plugin integrations to ensure smooth and scalable messaging operations.
 
-For more information, visit the official website: <a href="https://www.powersmpp.com" style="color:#0000EE; font-weight:600;">PowerSMPP.com</a>
+For more information, visit the official website: [PowerSMPP.com](https://www.powersmpp.com){ target="_blank" }
 
 ---
 
-## Explore the Documentation 📖
+## Explore the Documentation
 
-Quickly navigate through the available modules:
+<div class="grid cards" markdown>
 
-- <a href="admin/introducation/" style="color:#0000EE;">Admin</a> – Manage accounts, routing, and system configurations  
-- <a href="user/dashboard/dashboard/" style="color:#0000EE;">User</a> – Access features for end users including messaging and reporting  
-- <a href="plugins/email2sms/email/" style="color:#0000EE;">Plugins</a> – Extend functionality with supported plugins  
+-   :material-shield-account:{ .lg .middle } **Admin Guide**
+
+    ---
+
+    Manage accounts, routing, gateways, and system configurations
+
+    [:octicons-arrow-right-24: Get Started](admin/introduction.md)
+
+-   :material-account:{ .lg .middle } **User Guide**
+
+    ---
+
+    Access features for end users including messaging and reporting
+
+    [:octicons-arrow-right-24: Get Started](user/dashboard/dashboard.md)
+
+-   :material-puzzle:{ .lg .middle } **Plugins**
+
+    ---
+
+    Extend functionality with Email2SMS, SmartSMS, WhatsApp and MO
+
+    [:octicons-arrow-right-24: Get Started](plugins/email2sms/email.md)
+
+</div>
 
 ---
 
 ## Let's Discuss a Solution for You
 
-📞 Call us directly: <a href="tel:+919909945175" style="color:#0000EE; font-weight:600;">+91-9909945175</a>  
-💬 Or <a href="https://wa.me/919909945175" style="color:#0000EE;">Click here to WhatsApp</a>  
+!!! quote "Contact Us"
+    :material-phone: Call us directly: [+91-9909945175](tel:+919909945175)
+    :material-whatsapp: Or [Click here to WhatsApp](https://wa.me/919909945175){ target="_blank" }
 
 ---
 
