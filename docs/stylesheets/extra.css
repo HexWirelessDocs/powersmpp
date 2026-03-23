@@ -30,6 +30,129 @@
   margin-bottom: 0.5rem;
 }
 
+/* Password protection form */
+#mkdocs-decrypt-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 440px;
+  margin: 4rem auto;
+  padding: 3rem 2.5rem 2.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04);
+  text-align: center;
+  background: var(--md-default-bg-color);
+}
+
+#mkdocs-decrypt-form h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 0.2rem;
+  letter-spacing: -0.01em;
+}
+
+#mkdocs-decrypt-form h1::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1.2rem;
+  border-radius: 50%;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1s3.1 1.39 3.1 3.1v2z'/%3E%3C/svg%3E")
+    center / 30px no-repeat,
+    linear-gradient(135deg, #00d4ec 0%, #00bdd6 100%);
+  box-shadow: 0 4px 12px rgba(0, 189, 214, 0.3);
+}
+
+#mkdocs-decrypt-form h1::after {
+  content: 'Please enter the password to access this documentation';
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--md-default-fg-color--light);
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+#mkdocs-content-password {
+  width: 100%;
+  max-width: 340px;
+  padding: 0.75rem 1rem;
+  margin: 1.5rem 0 1.2rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  letter-spacing: 0.1em;
+}
+
+#mkdocs-content-password::placeholder {
+  letter-spacing: normal;
+  color: #aaa;
+}
+
+#mkdocs-content-password:focus {
+  border-color: #00bdd6;
+  box-shadow: 0 0 0 4px rgba(0, 189, 214, 0.1);
+}
+
+#mkdocs-decrypt-button {
+  width: 100%;
+  max-width: 340px;
+  padding: 0.75rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, #00d4ec 0%, #00bdd6 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 189, 214, 0.25);
+  transition: transform 0.15s, box-shadow 0.2s, opacity 0.2s;
+}
+
+#mkdocs-decrypt-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 189, 214, 0.35);
+  opacity: 0.95;
+}
+
+#mkdocs-decrypt-button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0, 189, 214, 0.2);
+}
+
+#mkdocs-decrypt-msg {
+  font-size: 0.85rem;
+  color: #d32f2f;
+  margin-top: 0.75rem;
+}
+
+/* Dark mode adjustments for password form */
+[data-md-color-scheme="slate"] #mkdocs-decrypt-form {
+  border-color: #333;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+[data-md-color-scheme="slate"] #mkdocs-content-password {
+  border-color: #444;
+}
+
+[data-md-color-scheme="slate"] #mkdocs-decrypt-button {
+  background: linear-gradient(135deg, #00d4ec 0%, #00bdd6 100%);
+  color: #fff;
+}
+
+[data-md-color-scheme="slate"] #mkdocs-content-password::placeholder {
+  color: #777;
+}
+
 /* Better image presentation */
 .md-typeset img {
   border-radius: 4px;
