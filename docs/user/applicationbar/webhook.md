@@ -1,5 +1,4 @@
 ---
-password: INJECT_USER_PASSWORD
 ---
 
 ## Webhooks: Real-time DLR/MO Notifications

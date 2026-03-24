@@ -1,5 +1,4 @@
 ---
-password: INJECT_USER_PASSWORD
 ---
 
 # Compose SMS: A2P SMS Campaigns

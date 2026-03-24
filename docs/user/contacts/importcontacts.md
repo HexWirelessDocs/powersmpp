@@ -1,5 +1,4 @@
 ---
-password: INJECT_USER_PASSWORD
 ---
 
 # Import Contacts: Streamlined Contact Addition to Groups

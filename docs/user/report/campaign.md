@@ -1,5 +1,4 @@
 ---
-password: INJECT_USER_PASSWORD
 ---
 
 # Reports: Comprehensive Analysis of MT Messages

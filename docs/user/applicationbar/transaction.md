@@ -1,5 +1,4 @@
 ---
-password: INJECT_USER_PASSWORD
 ---
 
 ## My Transaction: Record of SMS Transactions

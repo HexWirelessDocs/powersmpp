@@ -1,5 +1,4 @@
 ---
-password: INJECT_USER_PASSWORD
 ---
 
 ## Notification Emails: Stay Informed with Email Alerts

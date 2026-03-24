@@ -1,5 +1,4 @@
 ---
-password: INJECT_USER_PASSWORD
 ---
 
 ## Download Report: Accessing and Requesting Reports

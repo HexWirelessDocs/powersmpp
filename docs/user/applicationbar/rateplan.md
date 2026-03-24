@@ -1,5 +1,4 @@
 ---
-password: INJECT_USER_PASSWORD
 ---
 
 ## My Rate Plan: Overview of Cost Prices

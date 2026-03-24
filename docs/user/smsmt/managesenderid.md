@@ -1,5 +1,4 @@
 ---
-password: INJECT_USER_PASSWORD
 ---
 
 # Manage Sender ID: Configure Source Addresses

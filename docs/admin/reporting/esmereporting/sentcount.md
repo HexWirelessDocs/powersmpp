@@ -1,5 +1,4 @@
 ---
-password: INJECT_ADMIN_PASSWORD
 ---
 
 # ESME Reporting – Sent Count

@@ -1,5 +1,4 @@
 ---
-password: INJECT_ADMIN_PASSWORD
 ---
 
 # Report 3: My Schedule

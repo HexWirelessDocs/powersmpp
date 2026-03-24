@@ -1,5 +1,4 @@
 ---
-password: INJECT_ADMIN_PASSWORD
 ---
 
 ## Routing Rules Simulator

@@ -1,5 +1,4 @@
 ---
-password: INJECT_ADMIN_PASSWORD
 ---
 
 # Smartly Route Conversations with Advanced Routing Rules

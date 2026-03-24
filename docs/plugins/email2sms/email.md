@@ -1,5 +1,4 @@
 ---
-password: INJECT_ADMIN_PASSWORD
 ---
 
 ### Email 2 SMS: Seamless Email-to-SMS Communication

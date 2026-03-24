@@ -1,5 +1,4 @@
 ---
-password: INJECT_USER_PASSWORD
 ---
 
 # SMS From Excel: Triggering Campaigns with Excel Files

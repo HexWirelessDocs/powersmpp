@@ -1,5 +1,4 @@
 ---
-password: INJECT_USER_PASSWORD
 ---
 
 ## Message Count: Status-wise SMS Traffic Analysis
