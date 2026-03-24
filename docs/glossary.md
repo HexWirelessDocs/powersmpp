@@ -7,7 +7,7 @@ tags:
 
 # Glossary
 
-A quick reference guide to common terms used throughout the PowerSMPP documentation.
+A quick reference guide to common terms used throughout the Power SMPP documentation.
 
 ---
 

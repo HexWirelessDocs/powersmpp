@@ -39,7 +39,7 @@ These features are your ticket to **diversifying your business verticals** and *
 Manage larger campaigns efficiently with **iTextPro**. Our software suite allows you to connect an **unlimited number of telecom/aggregator gateways**, enabling **load balancing** to process substantial campaigns in a short period.
 
 !!! info "Naming Convention"
-    "**iTextPro**" is the **product name**, and "**PowerSMPP**" is the **brand name**. In this document, we exclusively use **iTextPro** to refer to our exceptional mobile messaging software.
+    "**iTextPro**" is the **product name**, and "**Power SMPP**" is the **brand name**. In this document, we exclusively use **iTextPro** to refer to our exceptional mobile messaging software.
 
 With **iTextPro**, you gain the ability to harness the full potential of mobile messaging for your enterprise. Discover the **convenience**, **compatibility**, and **power** of **iTextPro** today.
 

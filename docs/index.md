@@ -1,10 +1,10 @@
-# Welcome to PowerSMPP
+# Welcome to Power SMPP
 
-PowerSMPP is a high-performance and reliable messaging gateway designed for telecom operators, aggregators, and enterprises.
+Power SMPP is a high-performance and reliable messaging gateway designed for telecom operators, aggregators, and enterprises.
 
 It provides advanced features for SMS routing, monitoring, user management, and plugin integrations to ensure smooth and scalable messaging operations.
 
-For more information, visit the official website: [PowerSMPP.com](https://www.powersmpp.com){ target="_blank" }
+For more information, visit the official website: [Power SMPP.com](https://www.powersmpp.com){ target="_blank" }
 
 ---
 
@@ -48,4 +48,4 @@ For more information, visit the official website: [PowerSMPP.com](https://www.po
 
 ---
 
-Stay tuned for continuous updates and improvements. This documentation will help you set up, configure, and make the most out of **PowerSMPP**.
+Stay tuned for continuous updates and improvements. This documentation will help you set up, configure, and make the most out of **Power SMPP**.

@@ -1,6 +1,6 @@
 # Message Body Normalization
 
-The **Message Body Normalization** Rule is a built-in feature within **PowerSMPP**, designed to give administrators flexibility to modify and refine message content before submission to the gateway.  
+The **Message Body Normalization** Rule is a built-in feature within **Power SMPP**, designed to give administrators flexibility to modify and refine message content before submission to the gateway.  
 This ensures that all outgoing messages are formatted correctly, enhancing both readability and effectiveness.
 
 This document explains how **Message Body Normalization** works and how administrators can configure it to automatically adjust message content based on predefined rules — ensuring consistency and compliance with gateway requirements.
@@ -88,7 +88,7 @@ Same conditional options as above can be applied to message content, enabling pr
 
 ## ️ Actions: Detailed Explanation
 
-In **PowerSMPP**, the **Action** section offers three configurable methods to manipulate message content before submission to the gateway:
+In **Power SMPP**, the **Action** section offers three configurable methods to manipulate message content before submission to the gateway:
 
 1. **Extract Code**  
 2. **Find and Replace**  
@@ -208,7 +208,7 @@ This extracts the OTP and applies additional text formatting as configured.
 
 ## Summary
 
-**Message Body Normalization** in PowerSMPP empowers administrators to:
+**Message Body Normalization** in Power SMPP empowers administrators to:
 - Extract OTPs or codes,  
 - Add prefixes/suffixes,  
 - Replace words or phrases,  
