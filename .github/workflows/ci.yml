@@ -31,6 +31,14 @@ jobs:
           MKDOCS_PASSWORD: ${{ secrets.MKDOCS_PASSWORD }}
           MKDOCS_USER_PASSWORD: ${{ secrets.MKDOCS_USER_PASSWORD }}
         run: |
-          find docs -name "*.md" -exec sed -i "s/INJECT_ADMIN_PASSWORD/$MKDOCS_PASSWORD/g" {} +
-          find docs -name "*.md" -exec sed -i "s/INJECT_USER_PASSWORD/$MKDOCS_USER_PASSWORD/g" {} +
+          python3 -c "
+          import os, glob
+          admin_pw = os.environ['MKDOCS_PASSWORD']
+          user_pw = os.environ['MKDOCS_USER_PASSWORD']
+          for f in glob.glob('docs/**/*.md', recursive=True):
+              txt = open(f).read()
+              txt = txt.replace('INJECT_ADMIN_PASSWORD', admin_pw)
+              txt = txt.replace('INJECT_USER_PASSWORD', user_pw)
+              open(f, 'w').write(txt)
+          "
       - run: mkdocs gh-deploy --force
