@@ -1,5 +1,5 @@
 ---
-encrypt: False
+password: ''
 ---
 
 # Welcome to Power SMPP
