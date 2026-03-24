@@ -1,5 +1,3 @@
----
----
 
 # Manage Template: Configure Static Message Contents
 

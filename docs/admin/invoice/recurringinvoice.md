@@ -1,5 +1,3 @@
----
----
 
 ## Recurring Invoice
 

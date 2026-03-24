@@ -1,5 +1,3 @@
----
----
 
 ## Message Count: Status-wise SMS Traffic Analysis
 

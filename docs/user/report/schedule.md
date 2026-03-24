@@ -1,5 +1,3 @@
----
----
 
 ## My Schedule
 

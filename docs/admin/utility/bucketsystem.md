@@ -1,5 +1,3 @@
----
----
 
 # Bucket System
 

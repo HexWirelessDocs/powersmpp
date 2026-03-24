@@ -1,5 +1,3 @@
----
----
 
 # SMS From Excel: Triggering Campaigns with Excel Files
 

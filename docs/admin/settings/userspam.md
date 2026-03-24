@@ -1,5 +1,3 @@
----
----
 
 ## User Spam Keywords
 

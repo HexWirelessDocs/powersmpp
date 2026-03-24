@@ -1,5 +1,3 @@
----
----
 
 ## Manage User Groups
 

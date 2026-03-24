@@ -1,5 +1,3 @@
----
----
 
 # HTTP Gateway Logs
 

@@ -1,5 +1,3 @@
----
----
 
 ## Manage Payment Received
 

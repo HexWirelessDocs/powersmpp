@@ -1,5 +1,3 @@
----
----
 
 # Utility – Queue-to-Queue Transfer
 

@@ -1,5 +1,3 @@
----
----
 
 # Currency Manager
 

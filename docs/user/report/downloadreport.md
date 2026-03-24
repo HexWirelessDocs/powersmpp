@@ -1,5 +1,3 @@
----
----
 
 ## Download Report: Accessing and Requesting Reports
 

@@ -1,5 +1,3 @@
----
----
 
 ### Email 2 SMS: Seamless Email-to-SMS Communication
 

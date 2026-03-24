@@ -1,5 +1,3 @@
----
----
 
 ### API Documents: Access and Generate Request URLs
 

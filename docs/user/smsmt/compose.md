@@ -1,5 +1,3 @@
----
----
 
 # Compose SMS: A2P SMS Campaigns
 

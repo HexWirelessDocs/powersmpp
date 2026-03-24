@@ -1,5 +1,3 @@
----
----
 
 ## ESME Blacklist Rule
 

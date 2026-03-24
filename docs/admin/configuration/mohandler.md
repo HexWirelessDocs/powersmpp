@@ -1,5 +1,3 @@
----
----
 
 # HTTP MO Handler
 

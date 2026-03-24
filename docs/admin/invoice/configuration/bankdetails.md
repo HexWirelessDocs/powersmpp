@@ -1,5 +1,3 @@
----
----
 
 ### Configure Bank Details
 

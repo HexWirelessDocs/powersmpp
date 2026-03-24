@@ -1,5 +1,3 @@
----
----
 
 # Reports: Comprehensive Analysis of MT Messages
 

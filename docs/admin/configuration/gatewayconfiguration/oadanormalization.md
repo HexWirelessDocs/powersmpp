@@ -1,5 +1,3 @@
----
----
 
 ## OA/DA Normalization Rules in iTextPRO
 

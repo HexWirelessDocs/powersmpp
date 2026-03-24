@@ -1,5 +1,3 @@
----
----
 
 # HTTP DLR Handler
 

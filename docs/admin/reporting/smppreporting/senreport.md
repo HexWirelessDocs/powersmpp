@@ -1,5 +1,3 @@
----
----
 
 # User Sent Report
 

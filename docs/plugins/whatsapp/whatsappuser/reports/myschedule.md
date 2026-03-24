@@ -1,5 +1,3 @@
----
----
 
 # Report 3: My Schedule
 

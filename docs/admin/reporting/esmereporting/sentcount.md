@@ -1,5 +1,3 @@
----
----
 
 # ESME Reporting – Sent Count
 

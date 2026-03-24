@@ -1,5 +1,3 @@
----
----
 
 ## Routing Rules Simulator
 

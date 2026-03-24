@@ -1,5 +1,3 @@
----
----
 
 # Event Viewer (Server)
 

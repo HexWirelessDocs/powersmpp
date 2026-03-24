@@ -1,5 +1,3 @@
----
----
 
 ## My Transaction: Record of SMS Transactions
 

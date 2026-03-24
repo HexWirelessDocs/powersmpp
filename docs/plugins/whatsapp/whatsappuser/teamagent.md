@@ -1,5 +1,3 @@
----
----
 
 # Efficiently Manage Your Team with Agent Accounts
 

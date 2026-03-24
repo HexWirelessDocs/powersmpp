@@ -1,5 +1,3 @@
----
----
 
 ## Notification Emails: Stay Informed with Email Alerts
 

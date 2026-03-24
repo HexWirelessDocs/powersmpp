@@ -1,5 +1,3 @@
----
----
 
 # Report 1: Campaign Report
 

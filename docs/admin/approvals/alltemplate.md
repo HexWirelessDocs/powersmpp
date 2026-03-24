@@ -1,5 +1,3 @@
----
----
 
 # All Template Requests
 

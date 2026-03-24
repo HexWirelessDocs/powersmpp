@@ -1,5 +1,3 @@
----
----
 
 # Gateway Queue
 

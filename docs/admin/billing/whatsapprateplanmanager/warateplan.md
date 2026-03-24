@@ -1,5 +1,3 @@
----
----
 
 # Manage WA Rate Plan
 

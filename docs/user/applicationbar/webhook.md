@@ -1,5 +1,3 @@
----
----
 
 ## Webhooks: Real-time DLR/MO Notifications
 

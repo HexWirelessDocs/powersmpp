@@ -1,5 +1,3 @@
----
----
 
 # Report 2: Message Count Report
 

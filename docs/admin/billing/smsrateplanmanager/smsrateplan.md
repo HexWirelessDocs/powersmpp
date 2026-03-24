@@ -1,5 +1,3 @@
----
----
 
 # Rate Plan Templates
 

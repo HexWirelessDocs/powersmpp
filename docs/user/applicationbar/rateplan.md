@@ -1,5 +1,3 @@
----
----
 
 ## My Rate Plan: Overview of Cost Prices
 

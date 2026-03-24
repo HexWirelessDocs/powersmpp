@@ -1,5 +1,3 @@
----
----
 
 # Report 4: Download WhatsApp Report
 

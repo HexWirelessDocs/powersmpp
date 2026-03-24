@@ -1,5 +1,3 @@
----
----
 
 # Smartly Route Conversations with Advanced Routing Rules
 

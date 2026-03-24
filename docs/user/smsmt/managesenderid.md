@@ -1,5 +1,3 @@
----
----
 
 # Manage Sender ID: Configure Source Addresses
 

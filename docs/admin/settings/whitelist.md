@@ -1,5 +1,3 @@
----
----
 
 # White List Numbers
 

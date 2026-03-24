@@ -1,5 +1,3 @@
----
----
 
 # Notifications Events
 

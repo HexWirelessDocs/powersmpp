@@ -1,5 +1,3 @@
----
----
 
 # Manage Networks (MCC-MNC)
 

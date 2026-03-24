@@ -1,5 +1,3 @@
----
----
 
 # Telemarketer Configuration
 

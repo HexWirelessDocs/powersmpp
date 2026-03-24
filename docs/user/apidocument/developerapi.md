@@ -1,5 +1,3 @@
----
----
 
 ### Developer API: Empowering Integration with SMS API
 

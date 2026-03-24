@@ -1,5 +1,3 @@
----
----
 
 # View Throughput
 

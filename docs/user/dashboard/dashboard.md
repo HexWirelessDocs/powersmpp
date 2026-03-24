@@ -1,5 +1,3 @@
----
----
 
 # iText Hub User Panel
 

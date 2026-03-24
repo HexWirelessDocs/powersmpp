@@ -1,5 +1,3 @@
----
----
 
 # Live Campaign Report
 
