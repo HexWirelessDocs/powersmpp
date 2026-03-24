@@ -1,4 +1,5 @@
 ---
+password: INJECT_USER_PASSWORD
 
 ### Developer API: Empowering Integration with SMS API
 

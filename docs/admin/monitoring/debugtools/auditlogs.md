@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Audit Logs
 
 The **Audit Logs** feature in iTextPRO records a **comprehensive audit trail** of various events performed by both **Admin** and **User Accounts**.  

@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 ## Recurring Invoice
 
 This page allows you to **add, view, and edit** the invoice cycles for your **Postpaid Users**.  

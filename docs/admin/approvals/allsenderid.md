@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Approvals
 
 The **Approvals** section enables administrators to review and manage all approval requests initiated by users or resellers. This includes **Sender ID** and **Template** requests submitted for validation and compliance purposes.

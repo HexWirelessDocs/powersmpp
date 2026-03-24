@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # User Sent Report
 
 ![User Sent Report Overview](images/usersentreport1.png)  

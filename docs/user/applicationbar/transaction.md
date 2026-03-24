@@ -1,3 +1,7 @@
+---
+password: INJECT_USER_PASSWORD
+---
+
 ## My Transaction: Record of SMS Transactions
 
 The **My Transaction** tab in iTextPro provides a complete record of all **SMS transactions** carried out by the **parent account** to the **user account**.  

@@ -1,4 +1,5 @@
 ---
+password: INJECT_USER_PASSWORD
 
 ### Change Password: Customize Your Password Experience
 

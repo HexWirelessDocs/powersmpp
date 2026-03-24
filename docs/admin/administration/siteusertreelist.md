@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 ## Site User Tree List
 
 The **user hierarchy feature** provides a convenient **hierarchical view** of both **users and resellers**, allowing users to have a **comprehensive overview of all clients** simultaneously.

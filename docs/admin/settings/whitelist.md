@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # White List Numbers
 
 The **White List Numbers** feature allows administrators to define a list of globally whitelisted mobile numbers. When **DLR compensation** is enabled in the application, any message sent to a number included in the whitelist will always be submitted to the vendor and **will not be considered for DLR compensation**, regardless of delivery status.

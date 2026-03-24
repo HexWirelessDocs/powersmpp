@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 ## ESME Blacklist Rule
 
 The **ESME Blacklist Rule** in iTextPRO serves as a proactive safeguard to protect your SMPP server from rogue or misconfigured ESME clients. These clients may cause performance degradation due to repeated or abnormal command requests. By setting up this rule, administrators can **automatically blacklist** suspicious clients and prevent further damage.

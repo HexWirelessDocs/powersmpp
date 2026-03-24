@@ -26,6 +26,11 @@ jobs:
           restore-keys: |
             mkdocs-material-
       - run: pip install mkdocs-material mkdocs-encryptcontent-plugin
-      - run: mkdocs gh-deploy --force
+      - name: Inject passwords
         env:
           MKDOCS_PASSWORD: ${{ secrets.MKDOCS_PASSWORD }}
+          MKDOCS_USER_PASSWORD: ${{ secrets.MKDOCS_USER_PASSWORD }}
+        run: |
+          find docs -name "*.md" -exec sed -i "s/INJECT_ADMIN_PASSWORD/$MKDOCS_PASSWORD/g" {} +
+          find docs -name "*.md" -exec sed -i "s/INJECT_USER_PASSWORD/$MKDOCS_USER_PASSWORD/g" {} +
+      - run: mkdocs gh-deploy --force

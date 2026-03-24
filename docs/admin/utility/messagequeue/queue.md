@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Utility – Queue-to-Queue Transfer
 
 The **Queue-to-Queue Transfer** feature in iTextPro enables seamless transfer of SMS traffic between gateways, ensuring efficient management of messaging operations.  

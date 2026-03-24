@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Manage Archive Jobs
 
 !!! info "Coming Soon"

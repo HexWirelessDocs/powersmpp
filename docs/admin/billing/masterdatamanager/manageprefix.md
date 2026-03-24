@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Manage Prefix
 
 The **Manage Prefix** feature in iTextPRO is designed to efficiently handle mobile number prefixes associated with specific countries and network operators. It plays an important role in ensuring accurate network mapping and billing.

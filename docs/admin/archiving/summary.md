@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Archiving Summary
 
 !!! info "Coming Soon"

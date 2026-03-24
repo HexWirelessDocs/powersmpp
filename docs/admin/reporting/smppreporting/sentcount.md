@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # User Sent Counts
 
 ![User Sent Counts](images/usersentcount1.png)

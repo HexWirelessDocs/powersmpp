@@ -1,3 +1,7 @@
+---
+password: INJECT_USER_PASSWORD
+---
+
 # Manage Template: Configure Static Message Contents
 
 The **Manage Template** feature in iTextPro empowers users to efficiently configure static message contents for their SMS campaigns. This section provides a comprehensive guide on how users can manage templates within the platform.

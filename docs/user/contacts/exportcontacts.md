@@ -1,3 +1,7 @@
+---
+password: INJECT_USER_PASSWORD
+---
+
 # Export Contacts
 
 The **Export Contacts** feature in iTextPro provides users with a convenient way to retrieve contacts from specific groups and export them in various file formats (`.xls` / `.csv` / `.txt`).  

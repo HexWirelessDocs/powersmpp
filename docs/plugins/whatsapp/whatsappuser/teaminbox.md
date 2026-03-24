@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Team Inbox
 
 The **Team Inbox** provides a centralized platform to monitor and manage all customer interactions, whether handled by a human agent or a chatbot.  

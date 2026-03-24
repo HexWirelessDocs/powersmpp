@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Business Insights
 
 iTextPRO goes beyond data collection, leveraging a **robust data profiling algorithm** and **profiling engine** to deliver **actionable business insights**. This transforms raw SMS traffic data into meaningful intelligence for **partners** and **vendor gateways**.

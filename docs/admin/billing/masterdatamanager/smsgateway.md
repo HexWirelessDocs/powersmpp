@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Manage Gateway Price
 
 **Optimizing Financial Accuracy with Gateway Price Management in iTextPRO**

@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # PDU Capture
 
 The **PDU Capture** option is a powerful tool for capturing **live message traffic** entering or exiting the **Short Message Service Center (SMSC)**.  

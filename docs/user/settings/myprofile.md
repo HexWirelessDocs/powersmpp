@@ -1,3 +1,7 @@
+---
+password: INJECT_USER_PASSWORD
+---
+
 ## Settings
 
 In the **Settings** section, users can manage essential account configurations. This section contains the following options:

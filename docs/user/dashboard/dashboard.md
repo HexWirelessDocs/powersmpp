@@ -1,3 +1,7 @@
+---
+password: INJECT_USER_PASSWORD
+---
+
 # iText Hub User Panel
 
 ## User Module: Empowering End-Users

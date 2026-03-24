@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 ## Event Viewer (Invoicing)
 
 The **iTextPro Event Viewer (Invoicing)** provides detailed insights into any **errors or issues** encountered during the invoice creation process or during the sending of invoice notifications in the system.

@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 ## User Spam Keywords
 
 In **iTextPRO**, users have the option to apply a **personalized spam check** on specific users by creating **User Wise Spam rules**, consisting of a custom set of keywords or phrases.

@@ -1,4 +1,5 @@
 ---
+password: INJECT_ADMIN_PASSWORD
 tags:
   - WhatsApp
   - Plugin

@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Gateway Status Report
 
 iTextPRO offers a **comprehensive Gateway Status Report**, allowing users to quickly **assess and compare** the performance of various vendor gateways.

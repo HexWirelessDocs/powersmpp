@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Manage Networks (MCC-MNC)
 
 The **Manage MCC-MNC** feature in iTextPRO is a key tool for configuring and managing network operators within the system. It offers an intuitive and detailed interface, making operator management simple and efficient.

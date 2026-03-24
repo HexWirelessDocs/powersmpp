@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # WhatsApp Sent Report
 
 The **WhatsApp Sent Report** provides detailed, message-level information for deeper analysis.

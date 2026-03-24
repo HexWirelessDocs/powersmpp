@@ -1,3 +1,7 @@
+---
+password: INJECT_USER_PASSWORD
+---
+
 # Contacts
 
 This section consists of the following options:

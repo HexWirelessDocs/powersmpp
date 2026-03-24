@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # HTTP Gateway Logs
 
 !!! info "Coming Soon"

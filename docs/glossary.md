@@ -1,4 +1,5 @@
 ---
+password: INJECT_USER_PASSWORD
 tags:
   - Reference
   - SMPP

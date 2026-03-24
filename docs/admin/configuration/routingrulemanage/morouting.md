@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # MO Routing Rules
 
 !!! info "Coming Soon"

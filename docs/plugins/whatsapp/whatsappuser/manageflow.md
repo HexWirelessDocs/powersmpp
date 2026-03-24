@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Manage Flow
 
 Create and customize intelligent chatbots to automate your customer interactions and enhance efficiency. Our platform offers a variety of pre-built templates to help you get started quickly. Simply select a template and tailor it to your specific needs, or start from scratch to build a unique chatbot experience.

@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 ### Force Lockdown Policy
 
 The **Force Lockdown Policy** in iTextPRO is an intelligent security tool designed to proactively respond to suspected attack attempts on the admin account by securing all user accounts.

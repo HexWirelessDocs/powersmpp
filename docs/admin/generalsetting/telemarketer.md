@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Telemarketer Configuration
 
 With the introduction of **TRAI DLT regulations**, SMS traffic in India must follow a mandatory **PE-TM Chain** (Principal Entity-Telemarketer chain). This chain ensures traceability and regulatory compliance across all stakeholders involved in message delivery, including the **User, Reseller, Application, and Vendor**.

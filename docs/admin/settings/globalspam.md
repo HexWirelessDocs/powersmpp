@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 ## Global Spam Keywords
 
 Within the iTextPRO application, there exists an integrated **SPAM Engine**, offering users the ability to **configure a specific set of keywords or phrases**. This **SPAM Engine functions as a filter**, effectively screening out spam messages.

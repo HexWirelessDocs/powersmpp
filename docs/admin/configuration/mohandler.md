@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # HTTP MO Handler
 
 !!! info "Coming Soon"

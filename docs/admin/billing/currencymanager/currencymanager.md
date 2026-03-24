@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Currency Manager
 
 For businesses operating globally, **iTextPRO's Currency Manager** ensures seamless handling of multi-currency transactions with precision and stability.

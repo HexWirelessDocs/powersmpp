@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Invoicing
 
 The Invoicing module allows Admins to manage billing for their direct users (Account type: **User**) by providing a plugin to generate invoices, download them, or send them via email. The invoice generation flow is automated and triggered at specific intervals configured by the Admin.

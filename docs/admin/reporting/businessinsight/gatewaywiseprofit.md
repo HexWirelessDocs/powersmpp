@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Gateway Wise Profit
 
 !!! info "Coming Soon"

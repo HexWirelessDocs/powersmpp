@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Event Viewer (Client)
 
 The **iTextPRO Event Viewer (Client)** monitors and logs **system events**, providing administrators with a detailed view of **errors and crashes** that may impact SMS traffic.  

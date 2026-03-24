@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 ## Client Detail List
 
 The **Client Detail List** feature offers a **visually rich display of user information**, encompassing details such as **username**, **email ID**, **mobile number**, and more. This information serves as a valuable resource for **engaging with users** and facilitating **effective communication**.

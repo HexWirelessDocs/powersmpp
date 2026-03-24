@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 ## General Settings
 
 In **General Settings**, you can find four sub-options:

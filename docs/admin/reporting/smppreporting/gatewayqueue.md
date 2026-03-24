@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Gateway Queue
 
 ![Gateway Queue Overview](images/gatewayqueue1.png)  

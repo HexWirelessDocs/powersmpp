@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # All Template Requests
 
 This section displays **all Template requests** initiated by users or resellers, categorized by status:

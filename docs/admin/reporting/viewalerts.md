@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # View Alerts
 
 The **View Alerts** feature in iTextPRO provides a comprehensive list of alerts issued to both **users** and **administrators**, offering real-time insights into important system events. Each alert is accompanied by a **detailed description** in the notification module, ensuring users stay informed and take appropriate actions.

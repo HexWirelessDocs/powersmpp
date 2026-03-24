@@ -1,3 +1,7 @@
+---
+password: INJECT_USER_PASSWORD
+---
+
 # Reports: Comprehensive Analysis of MT Messages
 
 The **Reports** tab in iTextPro provides users with a comprehensive set of tools to analyze and track **MT (Mobile Terminated)** messages.  

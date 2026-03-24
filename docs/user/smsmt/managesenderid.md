@@ -1,3 +1,7 @@
+---
+password: INJECT_USER_PASSWORD
+---
+
 # Manage Sender ID: Configure Source Addresses
 
 iTextPro's **Manage Sender ID** feature empowers users to efficiently configure and oversee source addresses for their SMS campaigns. This section provides an overview of how users can manage sender IDs within the platform.

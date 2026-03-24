@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Event Viewer (Server)
 
 The **Event Viewer (Server)** in iTextPRO enables **real-time monitoring** of application events related to **ESME Users**.  

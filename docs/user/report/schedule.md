@@ -1,3 +1,7 @@
+---
+password: INJECT_USER_PASSWORD
+---
+
 ## My Schedule
 
 The **My Schedule** feature in iTextPro streamlines the tracking and management of scheduled campaigns.  

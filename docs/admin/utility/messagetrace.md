@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Message Trace
 
 The **Message Trace** option in iTextPro empowers you to **track and analyze message reports** with precision.  

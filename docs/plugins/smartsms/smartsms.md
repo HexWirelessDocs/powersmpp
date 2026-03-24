@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Smart SMS
 
 ## Smart SMS User Guide

@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # WhatsApp Sent Count
 
 The **WhatsApp Reporting** section has been integrated into the main Reporting module to provide administrators with centralized visibility across communication channels.

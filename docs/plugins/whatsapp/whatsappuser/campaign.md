@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # WhatsApp Campaign
 
 ## Initiating a WhatsApp Campaign

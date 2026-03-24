@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Download WhatsApp Report
 
 The **Download WhatsApp Report** feature enables administrators to generate and download detailed WhatsApp campaign reports in file format.

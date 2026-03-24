@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Rate Plan Templates
 
 In the competitive SMS industry, managing rates efficiently is crucial for maximizing revenue and ensuring sustainable profit margins. iTextPRO's **Rate Plan Manager** automates the process, enabling accurate, scalable, and easy-to-manage selling price configurations.

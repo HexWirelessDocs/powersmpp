@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 ### Force Password Change
 
 The **Force Password Change** policy in iTextPRO is an intelligent security tool designed to enforce password updates across all user accounts. This feature is especially valuable in response to suspected unauthorized access attempts on the admin account.

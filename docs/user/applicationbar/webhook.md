@@ -1,3 +1,7 @@
+---
+password: INJECT_USER_PASSWORD
+---
+
 ## Webhooks: Real-time DLR/MO Notifications
 
 The **Webhooks** feature in iTextPro enables users to receive **real-time notifications** of **DLR (Delivery Receipt)** and **MO (Mobile Originated)** messages through HTTP Web push.

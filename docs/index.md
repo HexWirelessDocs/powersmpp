@@ -1,3 +1,7 @@
+---
+encrypt: False
+---
+
 # Welcome to Power SMPP
 
 Power SMPP is a high-performance and reliable messaging gateway designed for telecom operators, aggregators, and enterprises.

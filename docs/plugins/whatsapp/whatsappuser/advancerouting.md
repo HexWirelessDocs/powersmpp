@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Smartly Route Conversations with Advanced Routing Rules
 
 With our platform, you can effectively manage the flow of webchat conversations by creating and customizing routing rules. This ensures that each chat is directed to the most appropriate agent or chatbot, optimizing efficiency and customer satisfaction.

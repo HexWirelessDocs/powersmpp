@@ -1,3 +1,7 @@
+---
+password: INJECT_USER_PASSWORD
+---
+
 # SMS From Excel: Triggering Campaigns with Excel Files
 
 The **SMS From Excel** tab in *iTextPro* provides users with a streamlined approach to trigger campaigns using an Excel file containing various message content or variables. This feature is particularly useful for sending reminders, personalized promotional offers, and more.

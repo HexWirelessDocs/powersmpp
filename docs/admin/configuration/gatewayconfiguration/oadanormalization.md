@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 ## OA/DA Normalization Rules in iTextPRO
 
 ![OA/DA Normalization](images/oada1.png)

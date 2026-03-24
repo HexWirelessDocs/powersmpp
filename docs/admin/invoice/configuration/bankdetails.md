@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 ### Configure Bank Details
 
 The **Configure Bank Details** section allows you to store and manage the bank account information where payments from clients should be made.  

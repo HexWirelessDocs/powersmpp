@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 ## Manage Services
 
 The **Manage Services** section in iTextPRO provides visibility into the various **background and foreground services** that drive the core functionalities of the platform. This interface is primarily intended for expert users or administrators.

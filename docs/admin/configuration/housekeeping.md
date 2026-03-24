@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 ## Housekeeping
 
 The **Housekeeping** feature in iTextPRO offers a powerful tool to **reset Master Billing Data** in a single action. This option is intended for administrative use in situations where a fresh setup or cleanup of billing data is required.

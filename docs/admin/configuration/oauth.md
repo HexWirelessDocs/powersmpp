@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # OAuth Handler
 
 !!! info "Coming Soon"

@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 ## Site Branding
 
 Site Branding within **iTextPRO** empowers users and resellers to tailor the visual identity of their application by configuring crucial details, including **domain pointing**, **company information**, and **SMTP settings**. This feature enables the creation of a personalized and branded environment within the iTextPRO application.

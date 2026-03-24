@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Template
 
 A WhatsApp Template is a pre-approved message format provided by Meta that businesses can use to send automated messages to their customers. These templates ensure compliance with WhatsApp's messaging policies and help businesses deliver consistent and effective communication.

@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 ## Rule Configuration
 
 To ensure your webchats are efficiently routed, you can create custom rules using the following parameters:

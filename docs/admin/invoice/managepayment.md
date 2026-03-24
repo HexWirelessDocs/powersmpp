@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 ## Manage Payment Received
 
 This section allows you to **record and claim payments** as soon as they are received from the client.  

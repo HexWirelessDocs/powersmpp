@@ -1,3 +1,7 @@
+---
+password: INJECT_USER_PASSWORD
+---
+
 # Compose SMS: A2P SMS Campaigns
 
 In **iTextPro**, the **Compose SMS** feature within the **SMS MT** option provides users with a powerful tool to create and send A2P (Application-to-Person) SMS campaigns. Here's a detailed guide on how to use this feature:

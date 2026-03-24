@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Report 3: My Schedule
 
 The **My Schedule** section allows you to keep track of your upcoming campaigns.  

@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Blacklist Numbers
 
 The **Blacklist Numbers** feature allows administrators to define a list of mobile numbers that are blocked across the application. Once a number is added to the blacklist, **all outbound messages to that number are automatically rejected by the application**, and no user will be able to send messages to it.

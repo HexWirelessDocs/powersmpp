@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Event Viewer (DLR)
 
 The **iTextPRO Event Viewer (DLR)** provides valuable insights into **errors encountered during Delivery Report (DLR) updates**.  

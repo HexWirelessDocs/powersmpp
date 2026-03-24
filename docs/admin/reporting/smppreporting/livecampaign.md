@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Live Campaign Report
 
 The **Live Campaign Report** module provides administrators with real-time visibility into all campaigns initiated across the platform.

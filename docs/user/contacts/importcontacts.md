@@ -1,3 +1,7 @@
+---
+password: INJECT_USER_PASSWORD
+---
+
 # Import Contacts: Streamlined Contact Addition to Groups
 
 The **Import Contacts** feature in iTextPro facilitates a straightforward process for users to add contacts to groups efficiently. This section outlines the simple three-step process for importing contacts, providing users with multiple options for streamlined contact management.

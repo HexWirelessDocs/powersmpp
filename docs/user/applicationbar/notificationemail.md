@@ -1,3 +1,7 @@
+---
+password: INJECT_USER_PASSWORD
+---
+
 ## Notification Emails: Stay Informed with Email Alerts
 
 The **Notification Emails** feature in iTextPro empowers users to enable **email notification alerts** for various events within the application. This ensures that stakeholders — including those configured in the user profile — receive timely updates.

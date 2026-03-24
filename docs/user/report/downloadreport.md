@@ -1,3 +1,7 @@
+---
+password: INJECT_USER_PASSWORD
+---
+
 ## Download Report: Accessing and Requesting Reports
 
 The **Download Report** tab in iTextPro acts as a central hub for managing reports.  

@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Report 1: Campaign Report
 
 The **Campaign Report** section provides two views for tracking campaign performance:

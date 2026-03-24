@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 ## Rollback Transactions
 
 The **"View Rollback Transactions"** option provides a **comprehensive history of rollback transactions** within the user account, specifically related to the **gateway vendor error codes** configured in the **Gateway Error Code Option**.

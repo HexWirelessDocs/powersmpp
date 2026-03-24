@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Server PDU Logs
 
 The **SMPP Server PDU Logs** in iTextPRO are essential for **monitoring and troubleshooting** message transactions between the **ESME (External Short Message Entity) user** and the iTextPRO platform.  

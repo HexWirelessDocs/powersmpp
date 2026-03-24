@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Message Body Normalization
 
 The **Message Body Normalization** Rule is a built-in feature within **Power SMPP**, designed to give administrators flexibility to modify and refine message content before submission to the gateway.  

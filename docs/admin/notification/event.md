@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Notifications Events
 
 The **"Notifications"** module in iTextPro serves as a proactive monitoring system, regularly assessing critical parameters of the application across various data points.  

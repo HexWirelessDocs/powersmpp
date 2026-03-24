@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Status Wise Report
 
 iTextPRO offers a **robust reporting module**, enabling users to access **detailed vendor-wise and user-wise reports** — essential for accurate billing and performance analysis.

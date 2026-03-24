@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Report 2: Message Count Report
 
 The **Message Count Report** provides a quick overview of your messaging activity.  

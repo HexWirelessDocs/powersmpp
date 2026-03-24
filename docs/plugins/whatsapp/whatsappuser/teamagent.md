@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Efficiently Manage Your Team with Agent Accounts
 
 The **Manage Agents** section empowers you to create individual accounts for your team members, enabling secure access to webchat conversations. By assigning specific agents to different webchat flows, you can optimize your team's efficiency and accountability.

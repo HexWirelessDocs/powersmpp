@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 ## Gateway Error Codes
 
 ![Gateway Error Codes](images/error1.png)

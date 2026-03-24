@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 ## ESME Client List
 
 The **ESME Client List** section in iTextPRO provides a centralized view of all users who have opted for **SMPP services** (External Short Messaging Entities). This interface allows administrators to easily monitor, search, and manage connected ESME clients.

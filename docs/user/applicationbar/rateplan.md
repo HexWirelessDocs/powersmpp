@@ -1,3 +1,7 @@
+---
+password: INJECT_USER_PASSWORD
+---
+
 ## My Rate Plan: Overview of Cost Prices
 
 The **My Rate Plan** option in iTextPro gives users a clear overview of their **cost prices** as defined by their **parent account**.  

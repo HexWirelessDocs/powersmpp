@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Download Report
 
 The **iTextPRO Download Report** feature allows users to easily download SMS reports in **Excel format** for detailed analysis.

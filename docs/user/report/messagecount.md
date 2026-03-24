@@ -1,3 +1,7 @@
+---
+password: INJECT_USER_PASSWORD
+---
+
 ## Message Count: Status-wise SMS Traffic Analysis
 
 The **Message Count** feature in iTextPro provides a detailed, status-wise analysis of SMS traffic.  

@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 ## Routing Rules Simulator
 
 The **Routing Rules Simulator** in iTextPRO is a powerful diagnostic tool that helps you simulate and visualize the best-matching **MT (Mobile-Terminated)** routing rules. This simulation allows users to test routing logic without sending actual SMS traffic, ensuring the configuration meets their delivery and business goals.

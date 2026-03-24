@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # ESME Reporting – Sent Count
 
 The **iTextPRO ESME Sent Count** feature provides a **message status-wise count** for each **ESME account** under a given user. This enables a detailed analysis of SMS traffic per ESME.

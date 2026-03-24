@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # Monitoring
 
 The **WhatsApp Plugin** offers a dedicated monitoring tool that provides granular insights into the communication between your application and Meta.  

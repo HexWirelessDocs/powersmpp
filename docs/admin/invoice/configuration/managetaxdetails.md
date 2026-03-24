@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 ### Manage Tax Details
 
 The **Manage Tax Details** section allows you to configure the taxes applicable to your business and apply them automatically to your users’ invoices.  

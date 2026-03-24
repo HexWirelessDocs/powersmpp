@@ -1,3 +1,7 @@
+---
+password: INJECT_ADMIN_PASSWORD
+---
+
 # View Throughput
 
 The **View Throughput** option provides a detailed breakdown of **Gateway performance** by showing throughput metrics across different time intervals.  
