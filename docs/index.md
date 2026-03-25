@@ -30,7 +30,7 @@ For more information, visit the official website: [Power SMPP.com](https://www.p
 
     Access features for end users including messaging and reporting
 
-    [:octicons-arrow-right-24: Get Started](user/dashboard/dashboard.md)
+    [:octicons-arrow-right-24: Get Started](https://doc.user.powersmpp.com){ target="_blank" }
 
 -   :material-puzzle:{ .lg .middle } **Plugins**
 
