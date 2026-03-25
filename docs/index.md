@@ -24,14 +24,6 @@ For more information, visit the official website: [Power SMPP.com](https://www.p
 
     [:octicons-arrow-right-24: Get Started](admin/introduction.md)
 
--   :material-account:{ .lg .middle } **User Guide**
-
-    ---
-
-    Access features for end users including messaging and reporting
-
-    [:octicons-arrow-right-24: Get Started](https://doc.user.powersmpp.com){ target="_blank" }
-
 -   :material-puzzle:{ .lg .middle } **Plugins**
 
     ---
