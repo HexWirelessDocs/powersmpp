@@ -18,11 +18,15 @@ In **Gateway HTTP**, apoiamos **3 tipos de autorização**:
 
 Neste documento, explicaremos todas as etapas e informações necessárias para o **OAuth Handler** configuração para o Gateway HTTP.
 
+![Manage OAuth Handler list](images/oauthhandler-01-list.png)
+
 ---
 
 ## Navegação
 
 <span data-ph="0"></span> □ <span data-ph="1"></span> □ <span data-ph="2"></span> □ <span data-ph="3"></span>.
+
+![Manage OAuth Handler form](images/oauthhandler-02-add-new.png)
 
 ---
 

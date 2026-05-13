@@ -11,7 +11,11 @@ In **Potência SMPP**, apoiamos ambos **SMPP** e **HTTP** protocolos para conect
 
 Como o nome sugere, o gateway HTTP é baseado no **Protocolo de Transferência de Hipertexto (HTTP)**Este protocolo permite aos clientes enviar mensagens através de uma API que atua como um gateway dentro da aplicação Power SMPP.
 
+![Manage Gateway list view](images/httpgw-01-manage-gateway.png)
+
 **Navegação:** <span data-ph="0"></span> □ <span data-ph="1"></span> □ <span data-ph="2"></span> □ <span data-ph="3"></span> □ <span data-ph="4"></span>.
+
+![HTTP Gateway Detail sections](images/httpgw-02-detail-sections.png)
 
 !!! tip "Ver Documentação"
  Ao clicar em **Adicionar um Novo**, a primeira opção será **Ver Documentação**. Recomendamos que o administrador reveja este documento para se familiarizar com os termos mencionados na configuração do gateway.
@@ -39,6 +43,8 @@ Nesta secção, são necessárias várias informações, tais como: **Nome do Po
 
 **Tipo de Pedido** — Especifica o tipo de pedido HTTP. Pode ser. **HTTP simples**, **REST/JSON**, ou **SOAP**. Diferentes tipos de solicitação requerem configurações diferentes. Geralmente, HTTP simples é usado para <span data-ph="0"></span> métodos, enquanto REST/JSON pode ser usado para ambos <span data-ph="1"></span> e <span data-ph="2"></span> métodos.
 
+![Required Credentials form](images/httpgw-03-required-credentials.png)
+
 **Detalhe do URL base** — Especifica a URL base da API HTTP, **excluindo** todos os outros parâmetros.
 
 !!! example
@@ -51,6 +57,8 @@ Nesta secção, são necessárias várias informações, tais como: **Nome do Po
 | 1 | **Sem Auth** | Não é necessária autorização. |
 | 2 | **Auth Básico** | Um nome de usuário e senha são necessários para autenticação segura da API. |
 | 3 | **OAuth 2.0** | A versão mais recente da autorização, usada para regenerar novas credenciais após um certo período para manter a alta segurança da API usando o **OAuth Handler** API. |
+
+![Authentication options](images/httpgw-04-authentication.png)
 
 ---
 
@@ -67,6 +75,8 @@ Nesta secção, são necessárias várias informações, tais como: **Nome do Po
 
 !!! note
  Mapeie seus tipos de mensagens específicas do gateway com tipos de mensagens do sistema. Deixar os campos em branco se não for aplicável.
+
+![Message Types form](images/httpgw-05-message-types.png)
 
 ---
 
@@ -147,6 +157,8 @@ Estes parâmetros incluem tipicamente:
 
 Para **GET** requisições, estes parâmetros são adicionados dentro da URL da requisição como parâmetros de consulta durante a execução da API.
 
+![Parameters configuration with example rows](images/httpgw-06-parameters.png)
+
 #### 2] Método POST
 
 A **POSTO** método permite que o administrador configure o gateway enviando todos os parâmetros de requisição necessários dentro do **organismo de solicitação** em vez de anexá-los no URL. Este método é recomendado para integrações de APIs onde grandes quantidades de dados, parâmetros de autenticação, cabeçalhos, tokens ou estruturas de carga são necessários.
@@ -190,6 +202,8 @@ Este tipo de carga útil é adequado para APIs que aceitam:
 - Permite o mapeamento dinâmico de parâmetros.
 - Simplifica validação de pedidos e solução de problemas.
 
+![POST Form Data Key-Value parameters](images/httpgw-07-post-form-data.png)
+
 ###### II] Carga útil RAW
 
 Esta opção permite ao administrador passar o **organismo de pedido completo** diretamente como conteúdo bruto sem definir parâmetros individuais de valor-chave separadamente.
@@ -221,6 +235,8 @@ O administrador pode colar diretamente ou configurar o conteúdo completo da car
 - Fornece flexibilidade para formatos personalizados de pedido de API.
 - Permite o controle direto sobre a estrutura de carga e formatação.
 
+![RAW JSON payload editor](images/httpgw-08-raw-payload.png)
+
 No Power SMPP, o administrador pode definir **placeholders** para vários valores, tais como <span data-ph="0"></span> para o ID do remetente, <span data-ph="1"></span> para o conteúdo do texto, <span data-ph="2"></span> para o destino, e muitos mais. Isto permite ao administrador configurar vários valores dinâmicos para os parâmetros. Além disso, o administrador pode alterar o tipo de parâmetro, se é um **Cabeçalho** ou a **Corpo** parâmetro, enquanto configura os valores.
 
 ---
@@ -228,6 +244,8 @@ No Power SMPP, o administrador pode definir **placeholders** para vários valore
 ## Secção 4: Parâmetros Condicionais
 
 Na secção de **Parâmetros Condicionais**, a aplicação tem um recurso para alterar qualquer um dos valores do parâmetro configurado configurando uma condição.
+
+![Conditional Parameters](images/httpgw-09-conditional-parameters.png)
 
 A construção de parâmetros condicionais é feita conforme a seguinte lógica:
 
@@ -257,6 +275,10 @@ A construção de parâmetros condicionais é feita conforme a seguinte lógica:
 | **Está ativo?** | Activa ou desactiva a 'gateway'. |
 | **Gateway Abrir / Fechar Tempo** | Janela de tempo operacional para o gateway em <span data-ph="0"></span> formato. |
 
+![Gateway Properties — Method](images/httpgw-10-gateway-properties-method.png)
+
+![Gateway Properties — Response Type](images/httpgw-11-gateway-properties-response.png)
+
 ---
 
 ## Secção 6: Propriedades da resposta
@@ -276,6 +298,8 @@ Se o fornecedor suporta o tipo de resposta como **JSON** ou **XML**, a configura
 | **Campo de Estado da Mensagem** | O campo onde o estado da mensagem está localizado na resposta. |
 | **Campo de Números Móveis** | O campo que contém o número de telemóvel na resposta. |
 
+![Response Properties — JSON / XML](images/httpgw-12-response-properties-json.png)
+
 ### 2] TEXTO
 
 Se o fornecedor suporta o tipo de resposta como **TEXTO**, o administrador precisa configurar parâmetros adicionais sob Propriedades de Resposta:
@@ -288,6 +312,8 @@ Se o fornecedor suporta o tipo de resposta como **TEXTO**, o administrador preci
 | **Campo ID da Mensagem** | Indica o campo onde o ID da mensagem está localizado na resposta. |
 | **Campo de Estado da Mensagem** | Indica o campo onde o estado da mensagem está localizado na resposta. |
 | **Campo de Números Móveis** | Usado para obter o número de telemóvel da resposta. O administrador precisa especificar o campo que contém o número móvel na resposta. |
+
+![Response Properties — TEXT](images/httpgw-13-response-properties-text.png)
 
 !!! note
  Na configuração de resposta, o administrador deve configurar os nomes dos parâmetros que armazenam os valores dos campos mencionados acima.
@@ -324,6 +350,8 @@ A **sessão** indica o número de conexões, e a sessão recomendada para um gat
 |-------|-------------------|
 | **No de Sessões** | <span data-ph="0"></span> |
 
+![Session configuration](images/httpgw-14-session.png)
+
 ---
 
 ## Secção 8: Entrega automática de mensagens
@@ -334,6 +362,8 @@ Se o fornecedor de gateway não enviar **Receitas de entrega (DLRs)**, a configu
 |-------|-------------|
 | **Está automaticamente marcado como entregue?** | Atualiza o status de entrega de mensagens mesmo que um DLR não seja recebido do fornecedor de gateway. Neste caso, **Estado padrão do DLR** será usado. |
 | **Estado padrão do DLR** | O estado de entrega por omissão atribuído às mensagens se o recurso de entrega automática for activado. É usado quando o sistema precisa marcar mensagens como entregues na ausência de uma DLR do gateway. Opções: <span data-ph="0"></span>, <span data-ph="1"></span>, <span data-ph="2"></span>, <span data-ph="3"></span>. |
+
+![Automatic Message Delivery](images/httpgw-15-automatic-delivery.png)
 
 !!! info "Útil para gateways que não emitem DLRs"
  Ativar entrega automática apenas quando o fornecedor upstream realmente nunca retorna um DLR. Caso contrário, deixe-o desativado para que DLRs reais do fornecedor conduzir o relatório.

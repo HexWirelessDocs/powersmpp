@@ -17,11 +17,15 @@ To receive the **DLR (Delivery Receipt)** from the vendor, the admin needs to co
 
 In this document, we will share all the steps and configuration which need to be done by the admin in order to receive the DLR correctly over the application.
 
+![Manage HTTP DLR Handler list](images/dlrhandler-01-list.png)
+
 ---
 
 ## Navigation
 
 `Configuration` ➔ `Gateway Configuration` ➔ `HTTP DLR Handlers` ➔ `Add New Handler`.
+
+![Add New Handler form with Method selector](images/dlrhandler-02-add-new.png)
 
 ---
 
@@ -67,6 +71,8 @@ Follow the below steps to configure the DLR handler for the above provided DLR s
 
 !!! tip
     In the example above, the parameter `status` stores the value of DLR status and `errorCode` stores the value of Error code. These parameters need to be configured as it is in **Message Status** and **Error Code** respectively. Apply the same logic for all other parameters shared by the vendor.
+
+![Handler configured with payload mapping](images/dlrhandler-03-configured.png)
 
 ---
 

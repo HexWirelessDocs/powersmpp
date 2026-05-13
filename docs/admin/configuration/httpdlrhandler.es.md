@@ -17,11 +17,15 @@ Para recibir **DLR (Delivery Receipt)** del proveedor, el administrador necesita
 
 En este documento, compartiremos todos los pasos y la configuración que necesite el administrador para recibir correctamente el DLR sobre la aplicación.
 
+![Manage HTTP DLR Handler list](images/dlrhandler-01-list.png)
+
 ---
 
 ## Navegación
 
 <span data-ph="0"></span> ➔ <span data-ph="1"></span> ➔ <span data-ph="2"></span> ➔ <span data-ph="3"></span>.
+
+![Add New Handler form with Method selector](images/dlrhandler-02-add-new.png)
 
 ---
 
@@ -67,6 +71,8 @@ Siga los siguientes pasos para configurar el controlador DLR para la muestra DLR
 
 !!! tip
  En el ejemplo anterior, el parámetro <span data-ph="0"></span> almacena el valor del estado DLR y <span data-ph="1"></span> almacena el valor del código Error. Estos parámetros deben ser configurados como en **Estado del mensaje** y **Código de error** respectivamente. Aplicar la misma lógica para todos los demás parámetros compartidos por el vendedor.
+
+![Handler configured with payload mapping](images/dlrhandler-03-configured.png)
 
 ---
 

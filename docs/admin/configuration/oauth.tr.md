@@ -18,11 +18,15 @@ In In In In In In In In In In In In In In In In In In In In In In In In In In In
 
 Bu belgede, gerekli olan tüm adımları ve bilgileri açıklayacağız. **OAuth Handler** HTTP Gateway için yapılandırma.
 
+![Manage OAuth Handler list](images/oauthhandler-01-list.png)
+
 ---
 
 ## Navigation
 
 <span data-ph="0"></span> <span data-ph="1"></span> <span data-ph="2"></span> <span data-ph="3"></span>.
+
+![Manage OAuth Handler form](images/oauthhandler-02-add-new.png)
 
 ---
 

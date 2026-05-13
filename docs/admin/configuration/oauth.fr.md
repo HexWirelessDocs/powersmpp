@@ -18,11 +18,15 @@ Dans **Gateway HTTP**, nous soutenons **3 types d'autorisation**:
 
 Dans ce document, nous expliquerons toutes les étapes et toutes les informations requises pour **Maître OAuth** configuration pour la passerelle HTTP.
 
+![Manage OAuth Handler list](images/oauthhandler-01-list.png)
+
 ---
 
 ## Navigation
 
 <span data-ph="0"></span> - Oui. <span data-ph="1"></span> - Oui. <span data-ph="2"></span> - Oui. <span data-ph="3"></span>.
+
+![Manage OAuth Handler form](images/oauthhandler-02-add-new.png)
 
 ---
 

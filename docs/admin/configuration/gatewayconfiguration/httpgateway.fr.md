@@ -11,7 +11,11 @@ Dans **Puissance SMPP**, nous soutenons les deux **SMPP** et **HTTP** les protoc
 
 Comme le nom l'indique, la passerelle HTTP est basée sur le **Protocole de transfert d'hypertexte (HTTP)**. Ce protocole permet aux clients d'envoyer des messages via une API qui agit comme passerelle dans l'application Power SMPP.
 
+![Manage Gateway list view](images/httpgw-01-manage-gateway.png)
+
 **Navigation:** <span data-ph="0"></span> - Oui. <span data-ph="1"></span> - Oui. <span data-ph="2"></span> - Oui. <span data-ph="3"></span> - Oui. <span data-ph="4"></span>.
+
+![HTTP Gateway Detail sections](images/httpgw-02-detail-sections.png)
 
 !!! tip "Voir la documentation"
  En cliquant sur **Ajouter un nouveau**, la première option sera **Voir la documentation**. Nous recommandons que l'administrateur examine ce document pour se familiariser avec les termes mentionnés dans la configuration de passerelle.
@@ -39,6 +43,8 @@ Dans la présente section, divers éléments d'information sont requis, notammen
 
 **Type de demande** — Spécifie le type de requête HTTP. Ça pourrait être **Simple HTTP**, **REST/JSON**ou **SOAP**. Différents types de requêtes nécessitent des configurations différentes. En général, Simple HTTP est utilisé pour <span data-ph="0"></span> méthodes, tandis que REST/JSON peut être utilisé pour les deux <span data-ph="1"></span> et <span data-ph="2"></span> méthodes.
 
+![Required Credentials form](images/httpgw-03-required-credentials.png)
+
 **Détail de l'URL de base** — Spécifie l'URL de base de l'API HTTP, **hors** tous les autres paramètres.
 
 !!! example
@@ -51,6 +57,8 @@ Dans la présente section, divers éléments d'information sont requis, notammen
 | 1 | **Pas d'heure** | Aucune autorisation n'est requise. |
 | 2 | **Niveau de base** | Un nom d'utilisateur et un mot de passe sont requis pour l'authentification sécurisée de l'API. |
 | 3 | **Auth 2.0** | La dernière version de l'autorisation, utilisée pour régénérer de nouveaux identifiants après une certaine période pour maintenir une haute sécurité de l'API en utilisant **Maître OAuth** API. |
+
+![Authentication options](images/httpgw-04-authentication.png)
 
 ---
 
@@ -67,6 +75,8 @@ Dans la présente section, divers éléments d'information sont requis, notammen
 
 !!! note
  Cartez vos types de messages spécifiques à la passerelle avec les types de messages système. Laisser les champs vides s'ils ne s'appliquent pas.
+
+![Message Types form](images/httpgw-05-message-types.png)
 
 ---
 
@@ -147,6 +157,8 @@ Ces paramètres comprennent généralement:
 
 Pour **Allez** requêtes, ces paramètres sont ajoutés dans l'URL de requête comme paramètres de requête pendant l'exécution de l'API.
 
+![Parameters configuration with example rows](images/httpgw-06-parameters.png)
+
 #### 2] Méthode POST
 
 Les **POSTE** méthode permet à l'administrateur de configurer la passerelle en envoyant tous les paramètres de requête requis dans le **organisme de demande** au lieu de les ajouter dans l'URL. Cette méthode est recommandée pour les intégrations d'API où de grandes quantités de données, paramètres d'authentification, en-têtes, jetons ou structures de charge utile complexes sont nécessaires.
@@ -190,6 +202,8 @@ Ce type de charge utile convient aux API qui acceptent :
 - Permet la cartographie dynamique des paramètres.
 - Simplifie la validation des demandes et le dépannage.
 
+![POST Form Data Key-Value parameters](images/httpgw-07-post-form-data.png)
+
 ###### II] Charge utile RAW
 
 Cette option permet à l'administrateur de passer **organisme de demande complet** directement en tant que contenu brut sans définir séparément les paramètres de valeur clé.
@@ -221,6 +235,8 @@ L'administrateur peut directement coller ou configurer le contenu complet de cha
 - Fournit une flexibilité pour les formats de demande d'API personnalisés.
 - Permet de contrôler directement la structure et le formatage de la charge utile.
 
+![RAW JSON payload editor](images/httpgw-08-raw-payload.png)
+
 Dans Power SMPP, l'administrateur peut définir **titulaires de places** pour diverses valeurs, telles que <span data-ph="0"></span> pour l'identifiant de l'expéditeur, <span data-ph="1"></span> pour le contenu du texte, <span data-ph="2"></span> pour la destination, et beaucoup plus. Cela permet à l'administrateur de configurer diverses valeurs dynamiques pour les paramètres. De plus, l'administrateur peut modifier le type de paramètre, qu'il s'agisse **En-tête** ou une **Corps** paramètre, tout en configurant les valeurs.
 
 ---
@@ -228,6 +244,8 @@ Dans Power SMPP, l'administrateur peut définir **titulaires de places** pour di
 ## Section 4: Paramètres conditionnels
 
 Dans la section de **Paramètres conditionnels**, l'application a une fonction pour modifier n'importe quelle des valeurs du paramètre configuré en configurant une condition.
+
+![Conditional Parameters](images/httpgw-09-conditional-parameters.png)
 
 La construction de paramètres conditionnels se fait selon la logique suivante:
 
@@ -257,6 +275,10 @@ La construction de paramètres conditionnels se fait selon la logique suivante:
 | **Est-ce actif ?** | Basculer pour activer ou désactiver la passerelle. |
 | **Porte ouverte / Heure de fermeture** | Fenêtre temporelle opérationnelle pour la passerelle <span data-ph="0"></span> modèle. |
 
+![Gateway Properties — Method](images/httpgw-10-gateway-properties-method.png)
+
+![Gateway Properties — Response Type](images/httpgw-11-gateway-properties-response.png)
+
 ---
 
 ## Section 6: Propriétés de la réponse
@@ -276,6 +298,8 @@ Si le fournisseur supporte le type de réponse comme **JSON** ou **XML**, la con
 | **Champ d'état du message** | Le champ où l'état du message se trouve dans la réponse. |
 | **Champ Numéro Mobile** | Le champ qui contient le numéro mobile dans la réponse. |
 
+![Response Properties — JSON / XML](images/httpgw-12-response-properties-json.png)
+
 ### 2] TEXTE
 
 Si le fournisseur supporte le type de réponse comme **TEXTE**, l'administrateur doit configurer des paramètres supplémentaires sous Propriétés de réponse:
@@ -288,6 +312,8 @@ Si le fournisseur supporte le type de réponse comme **TEXTE**, l'administrateur
 | **Champ MessageId** | Indique le champ où se trouve l'ID du message dans la réponse. |
 | **Champ d'état du message** | Indique le champ où se trouve l'état du message dans la réponse. |
 | **Champ Numéro Mobile** | Utilisé pour récupérer le numéro mobile de la réponse. L'administrateur doit spécifier le champ qui contient le numéro mobile dans la réponse. |
+
+![Response Properties — TEXT](images/httpgw-13-response-properties-text.png)
 
 !!! note
  Dans la configuration de réponse, l'administrateur doit configurer les noms de paramètres qui stockent les valeurs des champs mentionnés ci-dessus.
@@ -324,6 +350,8 @@ Les **de la session** indique le nombre de connexions, et la session recommandé
 |-------|-------------------|
 | **Nombre de sessions** | <span data-ph="0"></span> |
 
+![Session configuration](images/httpgw-14-session.png)
+
 ---
 
 ## Section 8: Livraison automatique des messages
@@ -334,6 +362,8 @@ Si le fournisseur de passerelle n'envoie pas **Recettes de livraison (DLR)**, la
 |-------|-------------|
 | **Est-il automatiquement marqué comme livré?** | Mettre à jour l'état de livraison des messages même si un DLR n'est pas reçu du fournisseur de passerelle. Dans ce cas, **État DLR par défaut** sera utilisé. |
 | **État DLR par défaut** | L'état de livraison par défaut attribué aux messages si la fonction de livraison automatique est activée. Il est utilisé lorsque le système doit marquer les messages tels qu'ils sont livrés en l'absence d'un DLR depuis la passerelle. Options: <span data-ph="0"></span>, <span data-ph="1"></span>, <span data-ph="2"></span>, <span data-ph="3"></span>. |
+
+![Automatic Message Delivery](images/httpgw-15-automatic-delivery.png)
 
 !!! info "Utile pour les passerelles qui ne délivrent pas de DLR"
  Activer la livraison automatique uniquement lorsque le fournisseur en amont ne retourne vraiment jamais un DLR. Sinon, laissez-le désactivé pour que les vrais DLR du vendeur conduisent le rapport.

@@ -17,11 +17,15 @@ Para receber o **DLR (Receita de Entrega)** do fornecedor, o administrador preci
 
 Neste documento, vamos compartilhar todas as etapas e configurações que precisam ser feitas pelo administrador para receber o DLR corretamente sobre o aplicativo.
 
+![Manage HTTP DLR Handler list](images/dlrhandler-01-list.png)
+
 ---
 
 ## Navegação
 
 <span data-ph="0"></span> □ <span data-ph="1"></span> □ <span data-ph="2"></span> □ <span data-ph="3"></span>.
+
+![Add New Handler form with Method selector](images/dlrhandler-02-add-new.png)
 
 ---
 
@@ -67,6 +71,8 @@ Siga os passos abaixo para configurar o manipulador DLR para a amostra DLR forne
 
 !!! tip
  No exemplo acima, o parâmetro <span data-ph="0"></span> armazena o valor do estado DLR e <span data-ph="1"></span> armazena o valor do código de erro. Estes parâmetros precisam ser configurados como está em **Estado da Mensagem** e **Código de Erro** respectivamente. Aplicar a mesma lógica para todos os outros parâmetros compartilhados pelo fornecedor.
+
+![Handler configured with payload mapping](images/dlrhandler-03-configured.png)
 
 ---
 

@@ -11,7 +11,11 @@ In **Power SMPP**, apoyamos ambos **SMPP** y **HTTP** protocolos para conectivid
 
 Como el nombre sugiere, la puerta de entrada HTTP se basa en la **Protocolo de transferencia de hipertexto (HTTP)**. Este protocolo permite a los clientes enviar mensajes a través de una API que actúa como puerta de entrada dentro de la aplicación Power SMPP.
 
+![Manage Gateway list view](images/httpgw-01-manage-gateway.png)
+
 **Navegación:** <span data-ph="0"></span> ➔ <span data-ph="1"></span> ➔ <span data-ph="2"></span> ➔ <span data-ph="3"></span> ➔ <span data-ph="4"></span>.
+
+![HTTP Gateway Detail sections](images/httpgw-02-detail-sections.png)
 
 !!! tip "Ver documentación"
  Al hacer clic en **Añadir nuevo**, la primera opción será **Ver documentación**. Recomendamos que el administrador revise este documento para familiarizarse con los términos mencionados en la configuración de la puerta de entrada.
@@ -39,6 +43,8 @@ En esta sección se requieren varias informaciones, como **Nombre de la puerta**
 
 **Tipo de solicitud** — Especifica el tipo de solicitud HTTP. Podría ser **HTTP simple**, **REST/JSON**o **SOAP**. Los diferentes tipos de solicitud requieren diferentes configuraciones. Generalmente, Simple HTTP se utiliza para <span data-ph="0"></span> métodos, mientras que REST/JSON se puede utilizar para ambos <span data-ph="1"></span> y <span data-ph="2"></span> métodos.
 
+![Required Credentials form](images/httpgw-03-required-credentials.png)
+
 **Base URL Detalle** — Especifica la URL base para la API HTTP, **excluyendo** todos los otros parámetros.
 
 !!! example
@@ -51,6 +57,8 @@ En esta sección se requieren varias informaciones, como **Nombre de la puerta**
 | 1 | **No Auth** | No se requiere autorización. |
 | 2 | **Auxilio básico** | Se requiere un nombre de usuario y contraseña para la autenticación segura de la API. |
 | 3 | **OAuth 2.0** | La última versión de autorización, utilizada para regenerar nuevas credenciales después de un determinado período para mantener la alta seguridad de la API utilizando la **OAuth Handler** API. |
+
+![Authentication options](images/httpgw-04-authentication.png)
 
 ---
 
@@ -67,6 +75,8 @@ En esta sección se requieren varias informaciones, como **Nombre de la puerta**
 
 !!! note
  Mapee los tipos de mensajes específicos de la puerta de entrada con tipos de mensajes del sistema. Deje los campos en blanco si no es aplicable.
+
+![Message Types form](images/httpgw-05-message-types.png)
 
 ---
 
@@ -147,6 +157,8 @@ Estos parámetros suelen incluir:
 
 Para **#** solicitudes, estos parámetros se adjuntan dentro de la URL de solicitud como parámetros de consulta durante la ejecución de API.
 
+![Parameters configuration with example rows](images/httpgw-06-parameters.png)
+
 #### 2) Método POST
 
 El **POST** método permite al administrador configurar la puerta de entrada enviando todos los parámetros de solicitud requeridos dentro del **petición del cuerpo** en lugar de gastarlos en la URL. Este método se recomienda para las integraciones de API donde se requieren grandes cantidades de datos, parámetros de autenticación, encabezados, fichas o estructuras complejas de carga útil.
@@ -190,6 +202,8 @@ Este tipo de carga útil es adecuado para APIs que aceptan:
 - Permite la asignación dinámica del parámetro.
 - Simplifica validación de solicitudes y solución de problemas.
 
+![POST Form Data Key-Value parameters](images/httpgw-07-post-form-data.png)
+
 ###### II] RAW Payload
 
 Esta opción permite que el administrador pase **cuerpo de solicitud completo** directamente como contenido bruto sin definir los parámetros individuales de valor clave por separado.
@@ -221,6 +235,8 @@ El administrador puede pegar directamente o configurar el contenido de carga út
 - Proporciona flexibilidad para formatos personalizados de solicitud API.
 - Permite el control directo sobre la estructura de carga útil y el formato.
 
+![RAW JSON payload editor](images/httpgw-08-raw-payload.png)
+
 En Power SMPP, el administrador puede definir **propietarios de puestos** para diversos valores, como <span data-ph="0"></span> para la identificación del remitente, <span data-ph="1"></span> para el contenido de texto, <span data-ph="2"></span> para el destino, y muchos más. Esto permite al administrador configurar varios valores dinámicos para los parámetros. Además, el administrador puede cambiar el tipo de parámetro, si es un **Header** o a **Cuerpo** parámetro, mientras que configuración los valores.
 
 ---
@@ -228,6 +244,8 @@ En Power SMPP, el administrador puede definir **propietarios de puestos** para d
 ## Sección 4: Parámetros condicionales
 
 En la sección de **Parámetros condicionales**, la aplicación tiene una función para cambiar cualquiera de los valores del parámetro configurado mediante la configuración de una condición.
+
+![Conditional Parameters](images/httpgw-09-conditional-parameters.png)
 
 La construcción del parámetro condicional se realiza según la lógica siguiente:
 
@@ -257,6 +275,10 @@ La construcción del parámetro condicional se realiza según la lógica siguien
 | **¿Es Activo?** | Toggle para habilitar o desactivar la puerta de entrada. |
 | **Gateway Open / Close Time** | Ventana de tiempo operacional para la entrada <span data-ph="0"></span> formato. |
 
+![Gateway Properties — Method](images/httpgw-10-gateway-properties-method.png)
+
+![Gateway Properties — Response Type](images/httpgw-11-gateway-properties-response.png)
+
 ---
 
 ## Sección 6: Propiedades de respuesta
@@ -276,6 +298,8 @@ Si el proveedor apoya el tipo de respuesta como **JSON** o **XML**, la configura
 | **Campo de estado del mensaje** | El campo donde el estado del mensaje se encuentra en la respuesta. |
 | **Número de móvil** | El campo que contiene el número móvil en la respuesta. |
 
+![Response Properties — JSON / XML](images/httpgw-12-response-properties-json.png)
+
 ### 2] TEXTO
 
 Si el proveedor apoya el tipo de respuesta como **TEXTO**, el administrador necesita configurar parámetros adicionales bajo Propiedades de Respuesta:
@@ -288,6 +312,8 @@ Si el proveedor apoya el tipo de respuesta como **TEXTO**, el administrador nece
 | **Campo MessageId** | Indica el campo donde se encuentra el ID de mensaje en la respuesta. |
 | **Campo de estado del mensaje** | Indica el campo donde se encuentra el estado del mensaje en la respuesta. |
 | **Número de móvil** | Solía buscar el número móvil de la respuesta. El administrador necesita especificar el campo que contiene el número móvil en la respuesta. |
+
+![Response Properties — TEXT](images/httpgw-13-response-properties-text.png)
 
 !!! note
  En la configuración de respuesta, el administrador debe configurar los nombres de parámetros que almacenan los valores de los campos mencionados anteriormente.
@@ -324,6 +350,8 @@ El **período de sesiones** indica el número de conexiones, y la sesión recome
 |-------|-------------------|
 | **Número de sesiones** | <span data-ph="0"></span> |
 
+![Session configuration](images/httpgw-14-session.png)
+
 ---
 
 ## Sección 8: Entrega automática de mensajes
@@ -334,6 +362,8 @@ Si el vendedor de la puerta de entrada no envía **Receipts de entrega (DLRs)**,
 |-------|-------------|
 | **¿Se marca automáticamente como se entrega?** | Actualiza el estado de entrega de mensajes incluso si un DLR no es recibido del proveedor de la puerta de entrada. En este caso, el **Default DLR Status** será usado. |
 | **Default DLR Status** | El estado de entrega predeterminado asignado a los mensajes si la función de entrega automática está activada. Se utiliza cuando el sistema necesita marcar mensajes tal como se entrega en ausencia de un DLR desde la entrada. Opciones: <span data-ph="0"></span>, <span data-ph="1"></span>, <span data-ph="2"></span>, <span data-ph="3"></span>. |
+
+![Automatic Message Delivery](images/httpgw-15-automatic-delivery.png)
 
 !!! info "Útil para puertas que no emiten DLRs"
  Activar la entrega automática sólo cuando el vendedor de corriente superior realmente nunca devuelve un DLR. De lo contrario, déjelo desactivado para que los DLR reales del proveedor conduzcan el informe.

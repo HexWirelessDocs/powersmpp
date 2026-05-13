@@ -11,7 +11,11 @@ In **Power SMPP**, we support both **SMPP** and **HTTP** protocols for vendor co
 
 As the name suggests, the HTTP gateway is based on the **Hypertext Transfer Protocol (HTTP)**. This protocol allows clients to send messages via an API that acts as a gateway within the Power SMPP application.
 
+![Manage Gateway list view](images/httpgw-01-manage-gateway.png)
+
 **Navigation:** `Configuration` ➔ `Gateway Configuration` ➔ `SMPP/HTTP Gateways` ➔ `HTTP Gateway` ➔ `Add New`.
+
+![HTTP Gateway Detail sections](images/httpgw-02-detail-sections.png)
 
 !!! tip "View Documentation"
     When clicking on **Add New**, the first option will be **View Documentation**. We recommend that the administrator review this document to become familiar with the terms mentioned in the gateway configuration.
@@ -39,6 +43,8 @@ In this section, various pieces of information are required, such as **Gateway N
 
 **Request Type** — Specifies the type of HTTP request. It could be **Simple HTTP**, **REST/JSON**, or **SOAP**. Different request types require different configurations. Generally, Simple HTTP is used for `GET` methods, while REST/JSON can be used for both `GET` and `POST` methods.
 
+![Required Credentials form](images/httpgw-03-required-credentials.png)
+
 **Base URL Detail** — Specifies the base URL for the HTTP API, **excluding** all other parameters.
 
 !!! example
@@ -51,6 +57,8 @@ In this section, various pieces of information are required, such as **Gateway N
 | 1 | **No Auth** | No authorization is required. |
 | 2 | **Basic Auth** | A username and password are required for secure authentication of the API. |
 | 3 | **OAuth 2.0** | The latest version of authorization, used to regenerate new credentials after a certain period to maintain high security of the API using the **OAuth Handler** API. |
+
+![Authentication options](images/httpgw-04-authentication.png)
 
 ---
 
@@ -67,6 +75,8 @@ In this section, various pieces of information are required, such as **Gateway N
 
 !!! note
     Map your gateway-specific message types with system message types. Leave the fields blank if not applicable.
+
+![Message Types form](images/httpgw-05-message-types.png)
 
 ---
 
@@ -147,6 +157,8 @@ These parameters typically include:
 
 For **GET** requests, these parameters are appended within the request URL as query parameters during API execution.
 
+![Parameters configuration with example rows](images/httpgw-06-parameters.png)
+
 #### 2] POST Method
 
 The **POST** method allows the admin to configure the gateway by sending all required request parameters within the **request body** instead of appending them in the URL. This method is recommended for API integrations where large amounts of data, authentication parameters, headers, tokens, or complex payload structures are required.
@@ -190,6 +202,8 @@ This payload type is suitable for APIs that accept:
 - Allows dynamic parameter mapping.
 - Simplifies request validation and troubleshooting.
 
+![POST Form Data Key-Value parameters](images/httpgw-07-post-form-data.png)
+
 ###### II] RAW Payload
 
 This option allows the admin to pass the **complete request body** directly as raw content without defining individual key-value parameters separately.
@@ -221,6 +235,8 @@ The admin can directly paste or configure the complete payload content exactly a
 - Provides flexibility for custom API request formats.
 - Allows direct control over payload structure and formatting.
 
+![RAW JSON payload editor](images/httpgw-08-raw-payload.png)
+
 In Power SMPP, the administrator can define **placeholders** for various values, such as `##senderid##` for Sender ID, `##message##` for the text content, `##mobile##` for the destination, and many more. This allows the administrator to configure various dynamic values for the parameters. Additionally, the administrator can change the parameter type, whether it is a **Header** or a **Body** parameter, while configuring the values.
 
 ---
@@ -228,6 +244,8 @@ In Power SMPP, the administrator can define **placeholders** for various values,
 ## Section 4: Conditional Parameters
 
 In the section of **Conditional Parameters**, the application has a feature to change any of the configured parameter's values by configuring a condition.
+
+![Conditional Parameters](images/httpgw-09-conditional-parameters.png)
 
 Conditional parameter construction is done as per the following logic:
 
@@ -257,6 +275,10 @@ Conditional parameter construction is done as per the following logic:
 | **Is Active?** | Toggle to enable or disable the gateway. |
 | **Gateway Open / Close Time** | Operational time window for the gateway in `hh:mm` format. |
 
+![Gateway Properties — Method](images/httpgw-10-gateway-properties-method.png)
+
+![Gateway Properties — Response Type](images/httpgw-11-gateway-properties-response.png)
+
 ---
 
 ## Section 6: Response Properties
@@ -276,6 +298,8 @@ If the vendor supports the response type as **JSON** or **XML**, the response co
 | **Message Status Field** | The field where the message status is located in the response. |
 | **Mobile Number Field** | The field that contains the mobile number in the response. |
 
+![Response Properties — JSON / XML](images/httpgw-12-response-properties-json.png)
+
 ### 2] TEXT
 
 If the vendor supports the response type as **TEXT**, the administrator needs to configure additional parameters under Response Properties:
@@ -288,6 +312,8 @@ If the vendor supports the response type as **TEXT**, the administrator needs to
 | **MessageId Field** | Indicates the field where the message ID is located in the response. |
 | **Message Status Field** | Indicates the field where the message status is located in the response. |
 | **Mobile Number Field** | Used to fetch the mobile number from the response. The administrator needs to specify the field that contains the mobile number in the response. |
+
+![Response Properties — TEXT](images/httpgw-13-response-properties-text.png)
 
 !!! note
     In the response configuration, the administrator must configure the parameter names that store the values of the fields mentioned above.
@@ -324,6 +350,8 @@ The **session** indicates the number of connections, and the recommended session
 |-------|-------------------|
 | **No. of Sessions** | `1` |
 
+![Session configuration](images/httpgw-14-session.png)
+
 ---
 
 ## Section 8: Automatic Message Delivery
@@ -334,6 +362,8 @@ If the gateway vendor does not send **Delivery Receipts (DLRs)**, the HTTP gatew
 |-------|-------------|
 | **Is Automatically Marked as Delivered?** | Updates the delivery status of messages even if a DLR is not received from the gateway vendor. In this case, the **Default DLR Status** will be used. |
 | **Default DLR Status** | The default delivery status assigned to messages if the automatic delivery feature is activated. It is used when the system needs to mark messages as delivered in the absence of a DLR from the gateway. Options: `DELIVRD`, `UNDELIV`, `REJECTD`, `EXPIRED`. |
+
+![Automatic Message Delivery](images/httpgw-15-automatic-delivery.png)
 
 !!! info "Useful for gateways that do not issue DLRs"
     Activate Automatic Delivery only when the upstream vendor genuinely never returns a DLR. Otherwise, leave it disabled so that real DLRs from the vendor drive the report.

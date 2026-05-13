@@ -17,11 +17,15 @@ Kabul etmek için **DLR (Delivery Receipt)** Satıcıdan, yöneticinin bir yapı
 
 Bu belgede, uygulama üzerinde doğru DLR almak için yönetici tarafından yapılması gereken tüm adımları ve konfigürasyonları paylaşacağız.
 
+![Manage HTTP DLR Handler list](images/dlrhandler-01-list.png)
+
 ---
 
 ## Navigation
 
 <span data-ph="0"></span> <span data-ph="1"></span> <span data-ph="2"></span> <span data-ph="3"></span>.
+
+![Add New Handler form with Method selector](images/dlrhandler-02-add-new.png)
 
 ---
 
@@ -67,6 +71,8 @@ Yukarıda verilen DLR handler'i yapılandırmak için aşağıdaki adımları iz
 
 !!! tip
  Yukarıdaki örnekte, parametre <span data-ph="0"></span> DLR statüsünün değerini depolar ve <span data-ph="1"></span> Hata kodunun değerini depolar. Bu parametreler içinde olduğu gibi yapılandırılmalıdır **Mesaj Status** ve **Hata Kodu** sırasıyla. Satıcı tarafından paylaşılan diğer tüm parametreler için aynı mantığı uygulayın.
+
+![Handler configured with payload mapping](images/dlrhandler-03-configured.png)
 
 ---
 

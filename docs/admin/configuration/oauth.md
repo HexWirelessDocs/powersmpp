@@ -18,11 +18,15 @@ In **HTTP Gateway**, we support **3 types of Authorization**:
 
 In this document, we will explain all the steps and information which is required for the **OAuth Handler** configuration for the HTTP Gateway.
 
+![Manage OAuth Handler list](images/oauthhandler-01-list.png)
+
 ---
 
 ## Navigation
 
 `Configuration` ➔ `Gateway Configuration` ➔ `OAuth Handlers` ➔ `Add New`.
+
+![Manage OAuth Handler form](images/oauthhandler-02-add-new.png)
 
 ---
 
