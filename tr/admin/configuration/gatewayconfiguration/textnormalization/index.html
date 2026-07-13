@@ -1,0 +1,6079 @@
+
+<!doctype html>
+<html lang="tr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://doc.powersmpp.com/tr/admin/configuration/gatewayconfiguration/textnormalization/">
+      
+      
+        <link rel="prev" href="../oadanormalization/">
+      
+      
+        <link rel="next" href="../../interfaceconfiguration/interface/">
+      
+      
+        
+          <link rel="alternate" href="../../../../../admin/configuration/gatewayconfiguration/textnormalization/" hreflang="en">
+        
+          <link rel="alternate" href="../../../../../pt/admin/configuration/gatewayconfiguration/textnormalization/" hreflang="pt">
+        
+          <link rel="alternate" href="../../../../../es/admin/configuration/gatewayconfiguration/textnormalization/" hreflang="es">
+        
+          <link rel="alternate" href="../../../../../fr/admin/configuration/gatewayconfiguration/textnormalization/" hreflang="fr">
+        
+          <link rel="alternate" href="./" hreflang="tr">
+        
+          <link rel="alternate" href="../../../../../zh/admin/configuration/gatewayconfiguration/textnormalization/" hreflang="zh">
+        
+          <link rel="alternate" href="../../../../../zh-Hant/admin/configuration/gatewayconfiguration/textnormalization/" hreflang="zh-Hant">
+        
+      
+      
+      <link rel="icon" href="../../../../../assets/powersmppfavicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Mesaj Text Normalization - Power SMPP Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Red Hat Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mesaj-body-normalizasyon" class="md-skip">
+          Ana içeriğe geç
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Başlık">
+    <a href="../../../../" title="Power SMPP Documentation" class="md-header__button md-logo" aria-label="Power SMPP Documentation" data-md-component="logo">
+      
+  <img src="../../../../../assets/powersmpp.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Power SMPP Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Mesaj Text Normalization
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="deep-orange"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="cyan"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Dil seç">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../../../admin/configuration/gatewayconfiguration/textnormalization/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../../pt/admin/configuration/gatewayconfiguration/textnormalization/" hreflang="pt" class="md-select__link">
+              Português (Portuguese)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../../es/admin/configuration/gatewayconfiguration/textnormalization/" hreflang="es" class="md-select__link">
+              Español (Spanish)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../../fr/admin/configuration/gatewayconfiguration/textnormalization/" hreflang="fr" class="md-select__link">
+              Français (French)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="tr" class="md-select__link">
+              Türkçe (Turkish)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../../zh/admin/configuration/gatewayconfiguration/textnormalization/" hreflang="zh" class="md-select__link">
+              简体中文 (Simplified Chinese)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../../zh-Hant/admin/configuration/gatewayconfiguration/textnormalization/" hreflang="zh-Hant" class="md-select__link">
+              繁體中文 (Traditional Chinese)
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Ara" placeholder="Ara" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Ara">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Paylaş" aria-label="Paylaş" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Temizle" aria-label="Temizle" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Arama başlatılıyor
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Sekmeler" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Hoşgeldiniz Welcome Welcome Hoşgeldiniz
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../introduction/" class="md-tabs__link">
+          
+  
+  
+  Admin
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../plugins/email2sms/email/" class="md-tabs__link">
+          
+  
+  
+  Plugins
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigasyon" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../" title="Power SMPP Documentation" class="md-nav__button md-logo" aria-label="Power SMPP Documentation" data-md-component="logo">
+      
+  <img src="../../../../../assets/powersmpp.png" alt="logo">
+
+    </a>
+    Power SMPP Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hoşgeldiniz Welcome Welcome Hoşgeldiniz
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Admin
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Admin
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Giriş
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Yönetim Yönetimi
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Yönetim Yönetimi
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kullanıcı Yönetimi
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Kullanıcı Yönetimi
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administration/usermanagement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kullanıcı Yönetimi
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administration/siteusertreelist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Site User Tree Listesi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administration/manageusergroup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kullanıcı Gruplarını Yönetin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administration/clientdetaillist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Müşteri detay listesi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administration/clienttransactions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Müşteri İşlemleri
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../administration/rollbacktransactions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rollback Transactions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Onaylar
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Onaylar
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../approvals/allsenderid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    All SenderId Request
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../approvals/alltemplate/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tüm Şablon İstek
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ayarlar
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Ayarlar
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../settings/blacklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Black List Numbers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../settings/whitelist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beyaz Liste Sayıları
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../settings/globalspam/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Global Spam Keyword
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../settings/userspam/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kullanıcı Spam Anahtar Kelime
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../settings/sitebranding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Site Branding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../settings/managenotification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bildirim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../settings/manageemail/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    E-posta yönetin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../settings/changepassword/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Change Password
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_4" id="__nav_2_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Genel ayarlama
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Genel ayarlama
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../generalsetting/managegeneralsettings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Genel ayarlamayı Yönetin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_4_2" id="__nav_2_2_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DLT Ayarları
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DLT Ayarları
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../generalsetting/telemarketer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Telemarketer Build
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../generalsetting/forcepassword/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Force Password Change politikası
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../generalsetting/forcelock/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Force Lock Down
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Yapılandırma
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Yapılandırma
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_1" id="__nav_2_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gateway Build
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Gateway Build
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smpphttp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SMPP Gateway
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../httpgateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP Gateway
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../httpdlrhandler/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP DLR Handler
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../oauth/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OAuth Handler
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mohandler/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP MO Handler
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../errorcode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gateway Hata kodları
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smpp-error-codes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SMPP Hata Kodu Referans
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oadanormalization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OA/DA Normalleştirme Kuralları
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mesaj Text Normalization
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mesaj Text Normalization
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#anahtar-ozellikler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anahtar Özellikler
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mesaj-vucut-normalizasyona-erisim" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mesaj Vücut Normalizasyona Erişim
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revizyon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revizyon
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Revizyon">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kural-ad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kural Adı
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#durum-ayarlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Durum Ayarları
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Durum Ayarları">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-interface-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Interface Interface
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-kullanc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Kullanıcı
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-gonderer-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Gönderer ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-hedef-adres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Hedef Adres
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-mesaj" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Mesaj
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eylemler-detayl-acklama" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eylemler: Detaylı Açıklama
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Eylemler: Detaylı Açıklama">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-extract-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Extract Code
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣ Extract Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-from-down-sablon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A) From Down Şablon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-occurrence-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        b) Occurrence Index
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-bul-ve-degistir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Bul ve Değiştir
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-append-ve-prepend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Append ve Prepend
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3️⃣ Append ve Prepend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-append" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        a) Append
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        b)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-ikisi-de" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        c) İkisi de
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-actions-combining-multiple-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi Actions Combining multiple Actions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oncekilik-ve-uyumluluk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Öncekilik ve Uyumluluk
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ozet-ozet-ozet-ozet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Özet Özet Özet Özet
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interface Build
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Interface Build
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaceconfiguration/interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Yönetişim Interface
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaceconfiguration/blacklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Esme Blacklist Kuralları
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../interfaceconfiguration/esme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ESME Müşterilerini Yönetin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3_3" id="__nav_2_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Routing Rule Manager Manager
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Routing Rule Manager Manager
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../routingrulemanage/mtrouting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MT Routing Kuralları
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../routingrulemanage/morouting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MO Routing Kuralları
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../routingrulemanage/routingrulesimulator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Routing Rule Simulator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../manageservice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hizmet Yönetimi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../housekeeping/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Temizlik servisi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../permission/permission/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    İzin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Raporlama
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Raporlama
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_1" id="__nav_2_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SMPP Raporlama
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SMPP Raporlama
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reporting/smppreporting/liveweb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Canlı Web Trafik Raporu
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reporting/smppreporting/livecampaign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Canlı Kampanya Raporu Raporu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reporting/smppreporting/gatewayqueue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gateway Queue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reporting/smppreporting/senreport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sent Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reporting/smppreporting/sentcount/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sent Count
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reporting/smppreporting/downloadreport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Download Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_2" id="__nav_2_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ESME Raporlama
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ESME Raporlama
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reporting/esmereporting/sentcount/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sent Count
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_3" id="__nav_2_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    İşi
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    İşi
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reporting/businessinsight/top10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Top 10 Senders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reporting/businessinsight/gatewaywisecount/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gateway Wise Count
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reporting/businessinsight/gatewaywiseprofit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gateway Wise Profit
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reporting/businessinsight/userwiseprofit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kullanıcı
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reporting/businessinsight/gatewaystatusreport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gateway Status Report Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reporting/businessinsight/statuswisereport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Durum Bilge Rapor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5_4" id="__nav_2_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WhatsApp Raporlaması
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    WhatsApp Raporlaması
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reporting/whatsappreporting/whatsappsentcount/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WhatsApp Sent Count
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reporting/whatsappreporting/whatsappsentreport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WhatsApp Sent Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reporting/whatsappreporting/downloadwhatsappreport/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Download WhatsApp Report
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../reporting/viewalerts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    View Alerts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    İzleme
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    İzleme
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_1" id="__nav_2_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SMPP Müşteri
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SMPP Müşteri
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../monitoring/smppclient/pdulogs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PDU Logs
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../monitoring/smppclient/httpgatewaylogs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP Gateway Logs
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../monitoring/smppclient/eventviewerclient/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Event Viewer (Client)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../monitoring/smppclient/eventviewerdlr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Event Viewer (DLR)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../monitoring/smppclient/eventviewermo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Event Viewer (MO)
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_2" id="__nav_2_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SMPP Server
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SMPP Server
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../monitoring/smppserver/pdulogs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PDU Logs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../monitoring/smppserver/eventviewerserver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Event Viewer (Server)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6_3" id="__nav_2_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Debug Tools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Debug Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../monitoring/debugtools/auditlogs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Denetim Logs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Billing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Billing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_1" id="__nav_2_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Master Data Manager
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Master Data Manager
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/masterdatamanager/managecountries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ülkeleri Yönetmek
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/masterdatamanager/managenetwork/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Network Network Network
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/masterdatamanager/manageprefix/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Yönetin Prefix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/masterdatamanager/smsgateway/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SMS Gateway Fiyatını Yönetin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_2" id="__nav_2_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SMS Rate Plan Manager
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SMS Rate Plan Manager
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/smsrateplanmanager/smsrateplan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hızlandırma Planı
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_3" id="__nav_2_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WA Rate Plan Manager
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    WA Rate Plan Manager
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/whatsapprateplanmanager/warateplan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WA Rate Planını Yönetin
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7_4" id="__nav_2_7_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Para Yöneticisi
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Para Yöneticisi
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../billing/currencymanager/currencymanager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Para Yönetimi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Çözüm
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Çözüm
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_8_1" id="__nav_2_8_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mesaj Queue
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mesaj Queue
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../utility/messagequeue/queue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Yönetme Queue Transfer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../utility/messagetrace/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mesaj
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../utility/viewthroughput/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    View Throughput
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../utility/bucketsystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kova Sistemi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../utility/pducapture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PDU yakalama
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_9" id="__nav_2_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bildirim
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bildirim
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../notification/event/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bildirim Etkinlikleri
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../notification/templates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bildirim Şablonları
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archiving
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archiving
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_10_1" id="__nav_2_10_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Yapılandırma
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Yapılandırma
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../archiving/configuration/archiveservers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Yönetmek Archive Servers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../archiving/configuration/archivejobs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Yönetmek Archive Jobs Jobs Jobs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../archiving/summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archiving Özet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_11" id="__nav_2_11_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Invoicing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Invoicing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../invoice/manageinvoice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Faturaları Yönetin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../invoice/recurringinvoice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Faturaları geri almak
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../invoice/managepayment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ödeme Kabul Edildi
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_11_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_11_4" id="__nav_2_11_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Yapılandırma
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_11_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_11_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Yapılandırma
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../invoice/configuration/generalsetting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Genel ayarlama
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../invoice/configuration/managetaxdetails/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vergi Detayları Yönetin
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../invoice/configuration/bankdetails/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Banka Detayları
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../invoice/eventviewer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Event Viewer (Invoicing)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Plugins
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../plugins/email2sms/email/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Email2SMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../plugins/smartsms/smartsms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SmartSMS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../plugins/mo/mo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Whatsapp
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Whatsapp
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../plugins/whatsapp/whatsappadmin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Whatsapp Adminsite
+  
+
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--encrypted"></span>
+  
+
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#anahtar-ozellikler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anahtar Özellikler
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mesaj-vucut-normalizasyona-erisim" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mesaj Vücut Normalizasyona Erişim
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revizyon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revizyon
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Revizyon">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kural-ad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kural Adı
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#durum-ayarlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Durum Ayarları
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Durum Ayarları">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-interface-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Interface Interface
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-kullanc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Kullanıcı
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-gonderer-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Gönderer ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-hedef-adres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Hedef Adres
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-mesaj" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Mesaj
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eylemler-detayl-acklama" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eylemler: Detaylı Açıklama
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Eylemler: Detaylı Açıklama">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-extract-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Extract Code
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1️⃣ Extract Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-from-down-sablon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A) From Down Şablon
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-occurrence-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        b) Occurrence Index
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-bul-ve-degistir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Bul ve Değiştir
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-append-ve-prepend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Append ve Prepend
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3️⃣ Append ve Prepend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-append" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        a) Append
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        b)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-ikisi-de" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        c) İkisi de
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-actions-combining-multiple-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multi Actions Combining multiple Actions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oncekilik-ve-uyumluluk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Öncekilik ve Uyumluluk
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ozet-ozet-ozet-ozet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Özet Özet Özet Özet
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigasyon" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../../../" class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Hoşgeldiniz Welcome Welcome Hoşgeldiniz
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../../introduction/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Admin
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../smpphttp/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Yapılandırma
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../smpphttp/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Gateway Build
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div id="mkdocs-encrypted-content" style="display:none">GARN+IX2wtiDD2nFHXU+gQ==;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</div>
+<div id="mkdocs-decrypted-content" style="display:none">
+    <form id="mkdocs-decrypt-form" class="md-content__inner md-typeset">
+        <h1></h1>
+        
+        <input class="md-input" type="password" id="mkdocs-content-password" placeholder="Enter password">
+        <button class="md-button md-button--primary" id="mkdocs-decrypt-button">Submit</button>
+        <p id="mkdocs-decrypt-msg"></p>
+    </form>
+</div>
+
+<script type="text/javascript">
+var encryptcontent_id = "encryptcontent_1";
+var encryptcontent_path = "tr/admin/configuration/gatewayconfiguration/textnormalization/";
+var decryption_failure_message = "Incorrect password. Please try again.";
+var encryptcontent_keystore = ["sWzjqn9pzq/YkFLApJ3BEQ==;WAIIi9IR3ehBCJw2jl7ciJNlU3Wz/9VmxhQPsI64x/JeChL20fpYRAzuG8sz/IgEW9XTAYhMa2VW3FzeGb8NSMs6s3h/0JXCQ7ZEog7o41jk9NjJKGdZPkzbN+kPvmvg;EreRbXXJX5gCsFc+HjZOGg=="];
+var encryptcontent_obfuscate = 0;
+
+const encryptcontent_event = new Event("encryptcontent_event");
+var encryptcontent_done = false;
+</script>
+<script type="module">
+if (!window.hasOwnProperty("init_decryptor")) {
+    import("../../../../../assets/javascripts/decrypt-contents.js");
+} else {
+    init_decryptor();
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Başa dön
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Altbilgi" >
+        
+          
+          <a href="../oadanormalization/" class="md-footer__link md-footer__link--prev" aria-label="Önceki: OA/DA Normalleştirme Kuralları">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Önceki
+              </span>
+              <div class="md-ellipsis">
+                OA/DA Normalleştirme Kuralları
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../interfaceconfiguration/interface/" class="md-footer__link md-footer__link--next" aria-label="Sonraki: Yönetişim Interface">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Sonraki
+              </span>
+              <div class="md-ellipsis">
+                Yönetişim Interface
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024-2026 Power SMPP. All rights reserved.
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://www.powersmpp.com" target="_blank" rel="noopener" title="Power SMPP Website" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://wa.me/919909945175" target="_blank" rel="noopener" title="WhatsApp Support" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157m-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6m101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.path", "search.highlight", "search.suggest", "search.share", "navigation.tracking", "navigation.footer", "navigation.top", "toc.follow", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Kopyaland\u0131", "clipboard.copy": "Kopyala", "search.result.more.one": "Bu sayfada 1 tane daha", "search.result.more.other": "Bu sayfada # tane daha", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.term.missing": "Eksik", "select.version": "Versiyon se\u00e7"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
